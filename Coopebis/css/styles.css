@@ -1,0 +1,3546 @@
+/* ========================================
+   RESET Y CONFIGURACIÓN BÁSICA
+   ======================================== */
+
+/* Reset básico para eliminar estilos por defecto del navegador */
+* {
+  margin: 0; /* Eliminar márgenes por defecto */
+  padding: 0; /* Eliminar paddings por defecto */
+  box-sizing: border-box; /* Incluir padding y border en el cálculo del ancho */
+}
+
+/* Configuración básica del body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  color: #333; /* Color de texto principal */
+  overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+/* Configuración para enlaces */
+a {
+  text-decoration: none; /* Quitar subrayado por defecto */
+  color: inherit; /* Heredar color del elemento padre */
+  transition: all 0.3s ease; /* Transición suave para efectos hover */
+}
+
+/* Configuración para listas */
+ul,
+ol {
+  list-style: none; /* Quitar viñetas por defecto */
+}
+
+/* Configuración para imágenes */
+img {
+  max-width: 100%; /* Imágenes responsive */
+  height: auto; /* Mantener proporción */
+  display: block; /* Eliminar espacio inferior */
+}
+
+/* ========================================
+SECCIÓN 1: REDES SOCIALES Y ENLACES RÁPIDOS
+   Barra superior con redes sociales e información de contacto
+   
+   CÓMO CAMBIAR EL FONDO: 
+   - Busca 'background:' en .seccion-redes
+   - Modifica los colores del gradiente o usa un color sólido
+   - Ejemplo: background: #f0f0f0; para gris sólido
+   ======================================== */
+
+/* Contenedor principal de la sección de redes */
+.seccion-redes {
+  /* MODIFICAR AQUÍ EL FONDO DE LA SECCIÓN */
+  background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%); /* Gradiente gris suave */
+  padding: 20px 0; /* Padding vertical */
+  border-bottom: 1px solid #dee2e6; /* Borde inferior */
+}
+
+/* Contenedor de redes */
+.redes-container {
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar horizontalmente */
+  display: flex; /* Flexbox para layout */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: space-between; /* Distribuir espacio */
+  padding: 0 20px; /* Padding horizontal */
+  gap: 30px; /* Espacio entre secciones */
+}
+
+/* Sección de redes sociales */
+.redes-sociales {
+  display: flex; /* Flexbox para alinear */
+  align-items: center; /* Centrar verticalmente */
+  gap: 20px; /* Espacio entre título e iconos */
+}
+
+/* Título de redes sociales */
+.redes-titulo {
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: 600; /* Peso semi-negrita */
+  color: #050505; /* Color gris oscuro */
+  margin: 0; /* Sin margen */
+}
+
+/* Contenedor de iconos de redes */
+.iconos-redes {
+  display: flex; /* Flexbox para alinear iconos */
+  gap: 15px; /* Espacio entre iconos */
+}
+
+/* Estilo para cada icono de red social */
+.icono-red {
+  width: 40px; /* Ancho fijo */
+  height: 40px; /* Alto fijo */
+  display: flex; /* Flexbox para centrar icono */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  border-radius: 50%; /* Hacer circular */
+  color: white; /* Color del icono */
+  font-size: 18px; /* Tamaño del icono */
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Colores específicos para cada red social */
+.icono-red.instagram {
+  color: #04354b;
+}
+
+.icono-red.facebook {
+  color: #04354b; /* Azul de Facebook */
+}
+
+.icono-red.tiktok {
+  color: #04354b; /* Gradiente TikTok */
+}
+
+.icono-red.youtube {
+  color: #04354b; /* Rojo de YouTube */
+}
+
+/* Efecto hover en iconos */
+.icono-red:hover {
+  transform: translateY(-3px) scale(1.1); /* Elevar y agrandar */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Sección de enlaces horizontales */
+.enlaces-horizontales {
+  flex: 1; /* Ocupar espacio restante */
+}
+
+/* Lista de enlaces */
+.lista-enlaces {
+  display: flex; /* Flexbox para alinear horizontalmente */
+  gap: 30px; /* Espacio entre enlaces */
+  justify-content: flex-end; /* Alinear a la derecha */
+  flex-wrap: wrap; /* Permitir salto de línea en móviles */
+}
+
+/* Estilo para cada enlace de servicio */
+.enlace-servicio {
+  font-size: 14px; /* Tamaño de fuente */
+  font-weight: 500; /* Peso medio */
+  color: #495057; /* Color gris oscuro */
+  padding: 8px 16px; /* Padding interno */
+  border-radius: 20px; /* Bordes redondeados */
+  background: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover en enlaces */
+.enlace-servicio:hover {
+  background: rgb(207,187,27); /* Fondo Verde - color institucional */
+  color: white; /* Texto blanco */
+  transform: translateY(-2px); /* Elevar ligeramente */
+  box-shadow: 0 3px 10px rgba(4, 53, 75, 0.3); /* Sombra verde */
+}
+
+/* ========================================
+SECCIÓN 1: BARRA SUPERIOR DE CONTACTO Y REDES SOCIALES
+   ======================================== */
+
+/* Sección superior con información de contacto */
+.seccion-superior {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradiente morado */
+  padding: 12px 0; /* Padding vertical */
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3); /* Borde inferior decorativo */
+  /* Agregar margin-top para compensar el espacio del menú fijo */
+  position: relative;
+  margin-top: 0; /* Se agrega aquí para asegurar que se aplique */
+}
+
+/* Contenedor para la sección superior */
+.seccion-superior-container {
+  max-width: 1200px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrado horizontal */
+  display: flex; /* Flexbox para layout */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Espacio entre elementos */
+  padding: 0 20px; /* Padding horizontal */
+  gap: 30px; /* Espacio entre secciones */
+}
+
+/* Elementos dentro de la sección superior (pueden ser títulos, enlaces, etc.) */
+.seccion-superior-item {
+  color: white; /* Texto blanco para contraste */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: 500; /* Peso medio */
+  display: flex; /* Para alinear iconos */
+  align-items: center; /* Centrar verticalmente */
+  gap: 8px; /* Espacio entre texto e icono */
+}
+
+.seccion-superior-item i {
+  font-size: 16px; /* Tamaño del icono */
+}
+
+/* Efecto hover sutil en los elementos de la barra superior */
+.seccion-superior-item:hover {
+  opacity: 0.8; /* Opacidad reducida */
+}
+
+/* ========================================
+SECCIÓN 2: BARRA DE NAVEGACIÓN PRINCIPAL
+   Menú principal con logo, navegación y menú hamburguesa para móviles
+   
+   CÓMO CAMBIAR EL FONDO:
+   - Busca 'background:' en .seccion-navegacion
+   - Modifica el gradiente o color según necesites
+   
+   CÓMO FUNCIONA EL MENÚ HAMBURGUESA:
+   - En pantallas > 768px: menú horizontal normal
+   - En pantallas ≤ 768px: se activa el menú hamburguesa
+   - Click en hamburguesa añade clase 'active' al menú
+   - Los submenús se controlan con clase 'dropdown-active'
+   ======================================== */
+
+/* Contenedor principal de navegación */
+.seccion-navegacion {
+  /* MODIFICAR AQUÍ EL FONDO DE LA NAVEGACIÓN */
+  background: white; /* <-- CAMBIAR AQUÍ el fondo de la navegación */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra inferior */
+  /* Navegacion fija - queda visible al hacer scroll */
+  position: sticky; /* Navegación pegajosa - se fija al hacer scroll */
+  top: 0; /* Se pega en la parte superior cuando hace scroll */
+  z-index: 1000; /* Z-index alto para estar encima de otros elementos */
+  padding: 0;
+}
+
+/* Contenedor de navegación en móvil */
+.navegacion-container {
+  display: flex; /* Usar flexbox para disposición */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrar verticalmente */
+  padding: 0 30px; /* Padding horizontal */
+  position: relative; /* Añadir position relative para posicionar el menú móvil dentro */
+}
+
+/* Contenedor del logo */
+.logo-container {
+  flex-shrink: 0; /* No permitir compresión */
+}
+
+/* Estilo del logo */
+.logo {
+  height: 90px; /* Alto fijo del logo */
+  width: auto; /* Ancho automático para mantener proporción */
+}
+
+/* Navegación principal */
+.navegacion-principal {
+  flex: 1; /* Ocupar espacio restante */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centrar navegación */
+}
+
+/* Lista principal de navegación */
+.nav-lista-principal {
+  display: flex; /* Flexbox para alinear horizontalmente */
+  gap: 30px; /* Espacio entre elementos */
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* Items de navegación */
+.nav-item {
+  position: relative; /* Para posicionar menús desplegables */
+}
+
+/* Enlaces de navegación */
+.nav-link {
+  font-size: 15px; /* Tamaño de fuente */
+  font-weight: 500; /* Peso medio */
+  color: #495057; /* Color gris oscuro */
+  padding: 10px 15px; /* Padding interno */
+  border-radius: 5px; /* Bordes ligeramente redondeados */
+  transition: all 0.3s ease; /* Transición suave */
+  display: flex; /* Flexbox para alinear con icono */
+  align-items: center; /* Centrar verticalmente */
+  gap: 5px; /* Espacio entre texto e icono */
+  cursor: pointer; /* Cursor de mano */
+}
+
+/* Efecto hover en enlaces de navegación */
+.nav-link:hover {
+  background: rgba(207, 187, 27, 0.1); /* Fondo verde claro */
+  color: rgb(207,187,27); /* Texto verde - color institucional */
+}
+
+/* Icono del menú desplegable */
+.nav-link i {
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s ease; /* Añadir transición para rotación suave */
+}
+
+/* ===========================
+   ESTILOS DE DROPDOWN - ESCRITORIO
+   =========================== */
+/* Reorganizado para aplicar solo en escritorio, no interferir con móvil */
+
+/* Contenedor del menú desplegable - SOLO ESCRITORIO */
+.dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Estilos de dropdown SOLO para escritorio */
+@media (min-width: 769px) {
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Enlaces del menú desplegable */
+.dropdown-link {
+  display: block; /* Mostrar como bloque */
+  padding: 10px 20px; /* Padding interno */
+  color: #04354B; /* Color gris oscuro */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: all 0.3s ease; /* Transición suave */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Efecto hover en enlaces desplegables */
+.dropdown-link:hover {
+  background: rgba(207, 187, 27, 0.1); /* Fondo gris claro */
+  color: rgb(4, 53, 75); /* Texto verde - color institucional */
+}
+
+/* ==========================================
+   MENÚ HAMBURGUESA PARA MÓVILES
+   
+   COMPONENTES CLAVE:
+   1. .menu-mobile-toggle = Botón hamburguesa (3 líneas)
+   2. .hamburger-line = Cada línea del icono
+   3. .active = Clase que se añade al hacer click
+   4. .navegacion-principal.active = Muestra el menú desplegable
+   5. .dropdown-active = Abre submenús en móvil
+   
+   CÓMO FUNCIONA:
+   - JavaScript añade/quita clase 'active' al hacer click
+   - CSS controla las animaciones y visibilidad
+   - En móvil, menú se despliega desde arriba
+   ========================================== */
+
+/* Botón de menú móvil (hamburguesa) - OCULTO en pantallas grandes */
+.menu-mobile-toggle {
+  display: none; /* Oculto por defecto en escritorio */
+  flex-direction: column; /* Apilar líneas verticalmente */
+  gap: 5px; /* Espacio entre líneas */
+  cursor: pointer; /* CRÍTICO: Cursor pointer para indicar que es clickeable */
+  padding: 8px; /* Área clickeable más grande */
+  z-index: 1002; /* Z-index MUY alto para estar encima del menú */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Líneas del menú hamburguesa */
+.hamburger-line {
+  width: 25px; /* Ancho de línea */
+  height: 3px; /* Alto de línea */
+  background: #495057; /* Color gris oscuro */
+  border-radius: 2px; /* Bordes redondeados */
+  transition: all 0.3s ease; /* Transición suave para animación */
+}
+
+/* ANIMACIÓN X cuando el menú está activo */
+.menu-mobile-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px); /* Primera línea: rotación y traslación */
+}
+
+.menu-mobile-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0; /* Segunda línea: desaparece */
+}
+
+.menu-mobile-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px); /* Tercera línea: rotación y traslación */
+}
+
+/* ==========================================
+   RESPONSIVE: MÓVILES (≤ 768px)
+   
+   MENÚ HAMBURGUESA Y NAVEGACIÓN MÓVIL
+   ========================================== */
+
+@media (max-width: 768px) {
+  /* Botón hamburguesa - VISIBLE en móvil */
+  .menu-mobile-toggle {
+    display: flex; /* Mostrar en móvil */
+  }
+
+  /* Navegación principal - Layout móvil */
+  .navegacion-principal {
+    /* Posicionamiento */
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    top: 100%; /* Debajo del header */
+    left: 0;
+    right: 0;
+    width: 100%; /* Ancho completo */
+
+    /* Estilo */
+    background: white; /* Fondo blanco */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+
+    /* Estado inicial: OCULTO */
+    max-height: 0; /* Altura 0 por defecto */
+    overflow: hidden; /* Ocultar contenido desbordado */
+
+    /* Animación suave */
+    transition: max-height 0.3s ease;
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  }
+
+  /* Mostrar menú cuando está activo */
+  .navegacion-principal.active {
+    max-height: 600px; /* Altura suficiente para mostrar todo */
+  }
+
+  /* Lista de navegación principal - Layout vertical */
+  .nav-lista-principal {
+    flex-direction: column; /* Disposición en columna */
+    gap: 0; /* Sin espacio entre items */
+    padding: 10px 0; /* Padding vertical */
+  }
+
+  /* Items de navegación en móvil */
+  .nav-item {
+    width: 100%; /* Ancho completo */
+    border-bottom: 1px solid #e9ecef; /* Separador entre items */
+  }
+
+  /* Enlaces de navegación en móvil - más grandes para facilitar el toque */
+  .nav-link {
+    padding: 15px 20px; /* Más padding para mejor toque */
+    width: 100%; /* Ancho completo */
+    display: flex; /* Flexbox para alinear texto e icono */
+    justify-content: space-between; /* Espacio entre texto e icono */
+    align-items: center; /* Centrar verticalmente */
+    color: #495057;
+    font-size: 16px;
+    border-radius: 0; /* Sin bordes redondeados en móvil */
+  }
+
+  /* Removiendo el hover de escritorio completamente en móvil para que no interfiera */
+  /* NO desactivar el hover aquí, en su lugar usar @media (min-width: 769px) para el hover */
+
+  /* Submenús en móvil */
+  /* Control de visibilidad solo con altura */
+  .dropdown-menu {
+    position: static !important;
+    width: 100% !important;
+    background: #f8f9fa !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    /* Estado inicial cerrado */
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+
+    /* Transición suave */
+    transition: max-height 0.3s ease !important;
+  }
+
+  /* Mostrar submenú cuando el dropdown está activo con clase JavaScript */
+  .nav-item.dropdown.dropdown-active .dropdown-menu {
+    max-height: 2000px !important; /* Altura suficiente para mostrar todo el contenido */
+  }
+
+  /* Rotar icono de chevron cuando dropdown está activo */
+  .nav-item.dropdown.dropdown-active .fa-chevron-down {
+    transform: rotate(180deg); /* Rotar 180 grados para indicar apertura */
+    transition: transform 0.3s ease; /* Transición suave */
+  }
+
+  /* Enlaces dentro de submenús móviles */
+  .dropdown-link {
+    padding: 12px 20px !important;
+    display: block !important;
+    color: #495057 !important;
+    font-size: 15px !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    background: #f8f9fa !important;
+    transition: background 0.3s ease !important;
+  }
+
+  /* Hover en enlaces de submenú móvil */
+  .dropdown-link:hover {
+    background: #e9ecef !important;
+    color: #007bff !important;
+  }
+
+  /* Último enlace del submenú sin borde inferior */
+  .dropdown-link:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Hover de escritorio solo en pantallas grandes */
+@media (min-width: 769px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+/* ========================================
+SECCIÓN 3: BANNER PROMOCIONAL
+   ======================================== */
+
+/* Contenedor principal del banner */
+.seccion-banner-promocional {
+  background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 100%); /* Fondo gris suave */
+  padding: 0; /* Sin padding para ocupar toda la pantalla */
+  position: relative; /* Para elementos absolutos */
+}
+
+/* Contenedor del slider */
+.slider-container {
+  position: relative; /* Para posicionar elementos internos */
+  width: 100%; /* Ancho completo */
+  height: 70vh; /* Alto del 70% de la pantalla */
+  min-height: 500px; /* Alto mínimo */
+  overflow: hidden; /* Ocultar contenido desbordado */
+}
+
+/* Wrapper de slides */
+.slider-wrapper {
+  display: flex; /* Flexbox para alinear slides */
+  width: 700%; /* 6 slides × 100% cada uno */
+  height: 100%; /* Alto completo */
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave */
+}
+
+/* Cada slide individual */
+.slide {
+  width: 16.666%; /* 100% / 6 slides */
+  height: 100%; /* Alto completo */
+  display: flex; /* Flexbox para contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  position: relative; /* Para elementos absolutos */
+  overflow: hidden; /* Ocultar desbordamiento */
+}
+
+/* Contenido de cada slide */
+.slide-content {
+  display: flex; /* Flexbox para layout */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: space-between; /* Distribuir espacio */
+  width: 100%; /* Ancho del contenido */
+  max-width: 1300px; /* Ancho máximo */
+  height: 80%; /* Alto del contenido */
+  gap: 50px; /* Espacio entre texto e imagen */
+}
+
+/* Texto del slide */
+.slide-text {
+  flex: 1; /* Ocupar espacio disponible */
+  max-width: 500px; /* Ancho máximo del texto */
+}
+
+/* Título del slide */
+.slide-titulo {
+  font-size: 3rem; /* Tamaño grande */
+  font-weight: 700; /* Muy negrita */
+  margin-bottom: 20px; /* Margen inferior */
+  line-height: 1.2; /* Altura de línea compacta */
+}
+
+/* Descripción del slide */
+.slide-descripcion {
+  font-size: 1.2rem; /* Tamaño mediano */
+  margin-bottom: 30px; /* Margen inferior */
+  line-height: 1.6; /* Altura de línea cómoda */
+  opacity: 0.9; /* Ligeramente transparente */
+}
+
+/* Botón del slide */
+.slide-boton {
+  background: linear-gradient(135deg, #005F73 0%, #0A3D47 100%); /* Gradiente azul */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 15px 30px; /* Padding generoso */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  font-weight: 600; /* Semi-negrita */
+  border-radius: 30px; /* Bordes muy redondeados */
+  cursor: pointer; /* Cursor de puntero */
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Sombra azul */
+}
+
+/* Efecto hover en botón */
+.slide-boton:hover {
+  transform: translateY(-3px); /* Elevar */
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4); /* Sombra más pronunciada */
+}
+
+/* Imagen del slide */
+.slide-imagen {
+  flex: 1; /* Ocupar espacio disponible */
+  max-width: 800px; /* Ancho máximo */
+  height: 100%; /* Alto completo */
+  display: flex; /* Flexbox para centrar imagen */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Imagen dentro del contenedor */
+.slide-imagen img {
+  max-width: 100%; /* Ancho máximo */
+  max-height: 100%; /* Alto máximo */
+  object-fit: contain; /* Mantener proporción */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilos específicos para cada slide */
+
+/* Slide 1: Azul moderno */
+.slide-1 {
+  background: linear-gradient(90deg, #479154 0%, #84CF94 100%);
+  color: white;
+}
+
+/* Slide 2: Verde elegante */
+.slide-2 {
+  background: linear-gradient(135deg, #E8BD44 0%, #61d414 100%);
+  color:#212121;
+}
+
+.slide-2 .slide-content {
+  flex-direction: row-reverse; /* Imagen a la izquierda */
+}
+
+/* Slide 3: Naranja vibrante */
+.slide-3 {
+ background: linear-gradient(90deg, #1d698a 0%, #6bbcdb 100%);
+  color: white;
+}
+
+/* Slide 4: Púrpura profesional */
+.slide-4 {
+  background: linear-gradient(90deg, #1d698a 0%, #a2d9ed 100%);
+  color: #F8F9F3;
+}
+
+.slide-4 .slide-content {
+  flex-direction: row-reverse; /* Imagen a la izquierda */
+}
+
+/* Slide 5: Rojo cálido */
+.slide-5 {
+  background: linear-gradient(90deg, #e4e8ea 0%, #a2d9ed 100%);
+  color: #04354b;
+}
+
+/* Slide 6: Teal fresco */
+.slide-6 {
+  background: linear-gradient(45deg, #FFCC00 0%, #f7E082 100%);
+  color: #001D3D;
+}
+
+.slide-6 .slide-content {
+  flex-direction: row-reverse; /* Imagen a la izquierda */
+}
+/* Slide 7: Teal fresco */
+.slide-7 {
+  background: linear-gradient(45deg, #FFCC00 0%, #f7E082 100%);
+  
+}
+.slide-7 .slide-content {
+  flex-direction: row-reverse; /* Imagen a la izquierda */
+}
+.slide-7 .slide-titulo {
+  color: #c93e5c;
+  /*-webkit-text-stroke: 1px white; /* Borde blanco de 1px */
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para mejorar legibilidad */
+   font-weight: bold; /* Aumentar peso para destacar aún más */
+}
+.slide-7 .slide-Subtitulo {
+  /*background-color: #7f4aa4; /* Fondo púrpura para el subtítulo */
+  color: #479154; /* Color púrpura para el subtítulo */
+
+}
+
+.slide-7 .slide-descripcion {
+  color: #2563eb; /* Azul más oscuro para la descripción */
+}
+
+/* Flechas de navegación */
+.slider-arrow {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 50%; /* Centrar verticalmente */
+  transform: translateY(-50%); /* Ajuste fino del centrado */
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+  border: none; /* Sin borde */
+  width: 50px; /* Ancho fijo */
+  height: 50px; /* Alto fijo */
+  border-radius: 50%; /* Hacer circular */
+  display: flex; /* Flexbox para centrar icono */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  cursor: pointer; /* Cursor de puntero */
+  font-size: 20px; /* Tamaño del icono */
+  color: #333; /* Color del icono */
+  transition: all 0.3s ease; /* Transición suave */
+  z-index: 10; /* Z-index alto */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Flecha anterior */
+.slider-arrow-prev {
+  left: 30px; /* Posición desde la izquierda */
+}
+
+/* Flecha siguiente */
+.slider-arrow-next {
+  right: 30px; /* Posición desde la derecha */
+}
+
+/* Efecto hover en flechas */
+.slider-arrow:hover {
+  background: white; /* Fondo blanco sólido */
+  transform: translateY(-50%) scale(1.1); /* Agrandar */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Indicadores de posición */
+.slider-indicators {
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 30px; /* Posición desde abajo */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajuste fino del centrado */
+  display: flex; /* Flexbox para alinear indicadores */
+  gap: 10px; /* Espacio entre indicadores */
+  z-index: 10; /* Z-index alto */
+}
+
+/* Cada indicador */
+.indicator {
+  width: 12px; /* Ancho del indicador */
+  height: 12px; /* Alto del indicador */
+  border-radius: 50%; /* Hacer circular */
+  background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
+  cursor: pointer; /* Cursor de puntero */
+  transition: all 0.3s ease; /* Transición suave */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* Borde blanco */
+}
+
+/* Indicador activo */
+.indicator.active {
+  background: white; /* Fondo blanco sólido */
+  transform: scale(1.2); /* Agrandar */
+}
+
+/* Efecto hover en indicadores */
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.8); /* Fondo más opaco */
+}
+
+/* ========================================
+SECCIÓN 4: PORTAFOLIO DE PRODUCTOS
+   Muestra de productos/servicios en formato grid
+   ======================================== */
+
+/* Contenedor de la sección */
+.portafolio-section {
+  background: #ffffff; /* Fondo blanco */
+  padding: 80px 20px; /* Espaciado vertical */
+  width: 100%;
+}
+
+/* Contenedor interno con ancho máximo */
+.portafolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título principal de la sección */
+.portafolio-titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3b1e2e;
+  margin-bottom: 15px;
+  letter-spacing: -0.02em;
+}
+
+/* Descripción de la sección */
+.portafolio-descripcion {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 40px auto; /* Centrado y con margen inferior */
+  line-height: 1.6;
+}
+
+/* Grid de productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+  gap: 30px;
+}
+
+/* Card individual de producto */
+.producto-card {
+  background: #f8f9fa; /* Fondo gris claro */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Empuja el contenido hacia arriba y el botón hacia abajo */
+  height: 100%; /* Asegura que todas las cards tengan la misma altura si el grid lo permite */
+}
+
+/* Efecto hover en la card */
+.producto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Icono del producto */
+.producto-icono {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); /* Gradiente azul */
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover en icono */
+.producto-card:hover .producto-icono {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* Título del producto */
+.producto-titulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+/* Descripción del producto */
+.producto-descripcion {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 25px; /* Espacio antes del botón */
+  flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
+}
+
+/* Botón "Ver más" */
+.producto-boton {
+  background: #37010b; /* Fondo azul oscuro */
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(30, 58, 138, 0.3);
+}
+
+/* Efecto hover en el botón */
+.producto-boton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(30, 58, 138, 0.4);
+  background: #2563eb; /* Azul más claro al hacer hover */
+}
+
+/* ========================================
+SECCIÓN 5: BENEFICIOS
+   Cards con iconos y descripciones
+   ======================================== */
+
+/* Variables CSS para personalización */
+:root {
+  --benefits-bg: #f8f9fa; /* Fondo de la sección de beneficios */
+  --benefits-card-bg: #ffffff; /* Fondo de las tarjetas de beneficios */
+  --benefits-primary: #e8bd44; /* Color primario (ej. para bordes o enlaces) */
+  --benefits-text-dark: #04354B; /* Color de texto principal oscuro */
+  --benefits-text-light: #64748b; /* Color de texto secundario claro */
+
+  /* Colores de hover/interacción */
+  --benefits-hover-shadow: rgba(37, 99, 235, 0.15); /* Sombra al hacer hover */
+  --benefits-overlay: rgba(37, 99, 235, 0.1); /* Overlay sutil al hacer hover */
+
+  /* Espaciados */
+  --benefits-section-padding: 80px 20px; /* Padding para la sección */
+  --benefits-card-gap: 24px; /* Espacio entre tarjetas de beneficios */
+  --benefits-card-radius: 16px; /* Radio de borde para las tarjetas */
+
+  /* Tamaños de fuente */
+  --benefits-title-size: 2.5rem; /* Tamaño del título principal de la sección */
+  --benefits-card-title-size: 1.25rem; /* Tamaño del título de cada tarjeta */
+}
+
+/* Contenedor principal de la sección de beneficios */
+.benefits-section {
+  background-color: var(--benefits-bg); /* Fondo de la sección */
+  padding: var(--benefits-section-padding); /* Espaciado interno */
+  width: 100%;
+}
+
+/* Contenedor interno con ancho máximo */
+.benefits-container {
+  max-width: 1400px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centra el contenedor */
+  width: 100%;
+}
+
+/* Header de la sección (título y descripción) */
+.benefits-header {
+  text-align: center; /* Centra el título */
+  margin-bottom: 48px; /* Espacio inferior antes de las cards */
+}
+
+/* Título principal de la sección */
+.benefits-title {
+  font-size: var(--benefits-title-size); /* Tamaño de fuente */
+  font-weight: 700; /* Peso de la fuente */
+  color: var(--benefits-text-dark); /* Color del texto */
+  margin: 0; /* Elimina márgenes por defecto */
+  line-height: 1.2; /* Altura de línea */
+  letter-spacing: -0.02em; /* Espaciado entre letras */
+}
+
+/* Grid de cards - disposición horizontal */
+.benefits-cards-grid {
+  display: grid; /* Usa Grid para layout horizontal */
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual tamaño */
+  gap: var(--benefits-card-gap); /* Espacio entre las cards */
+  align-items: stretch; /* Alinea las cards */
+}
+
+/* Card individual (enlace) */
+.benefit-card {
+  background-color: var(--benefits-card-bg); /* Fondo blanco de la card */
+  border-radius: var(--benefits-card-radius); /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra sutil inicial */
+  overflow: hidden; /* Oculta contenido que sobresale */
+  transition: all 0.3s ease; /* Transición suave */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  display: block; /* Muestra como bloque */
+  cursor: pointer; /* Cursor pointer */
+  position: relative; /* Posición relativa para efectos */
+}
+
+/* Efecto hover en la card */
+.benefit-card:hover {
+  transform: translateY(-8px); /* Eleva la card */
+  box-shadow: 0 12px 24px var(--benefits-hover-shadow); /* Aumenta la sombra */
+  border: 2px solid var(--benefits-primary); /* Borde sutil primario */
+}
+
+/* Contenedor de la imagen */
+.benefit-card-image {
+  position: relative; /* Para overlay */
+  height: 200px; /* Altura fija */
+  width: 100%; /* Ancho completo */
+  overflow: hidden; /* Oculta desbordamiento */
+  background-color: #e2e8f0; /* Fondo mientras carga la imagen */
+}
+
+/* Imagen dentro de la card */
+.benefit-card-image img {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  object-fit: cover; /* Cubre el espacio sin deformar */
+  transition: transform 0.4s ease; /* Transición suave para zoom */
+}
+
+/* Efecto zoom en la imagen al hover */
+.benefit-card:hover .benefit-card-image img {
+  transform: scale(1.1); /* Aumenta el tamaño */
+}
+
+/* Overlay sutil al hacer hover */
+.benefit-card:hover .benefit-card-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--benefits-overlay); /* Color del overlay */
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+/* Contenido de texto de la card */
+.benefit-card-content {
+  padding: 20px 16px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+}
+
+/* Título de la card (H3) */
+.benefit-card-title {
+  font-size: var(--benefits-card-title-size); /* Tamaño de fuente */
+  font-weight: 600; /* Peso de la fuente */
+  color: var(--benefits-text-dark); /* Color del texto */
+  margin: 0; /* Elimina márgenes */
+  line-height: 1.4; /* Altura de línea */
+  transition: color 0.3s ease; /* Transición de color */
+}
+
+/* Cambio de color del título al hover */
+.benefit-card:hover .benefit-card-title {
+  color: var(--benefits-primary); /* Cambia a color primario */
+}
+
+/* RESPONSIVE - TABLETS (4 COLUMNAS) */
+@media (max-width: 1200px) {
+  .benefits-cards-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  }
+
+  .benefit-card:last-child {
+    grid-column: 2 / 4; /* Última card ocupa 2 columnas y se centra */
+  }
+}
+
+/* RESPONSIVE - TABLETS PEQUEÑAS (3 COLUMNAS) */
+@media (max-width: 900px) {
+  .benefits-cards-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  }
+
+  .benefit-card:last-child {
+    grid-column: auto;
+  }
+
+  /* Ajusta tamaño del título */
+  .benefits-title {
+    font-size: 2rem;
+  }
+}
+
+/* RESPONSIVE - MÓVILES (2 COLUMNAS) */
+@media (max-width: 640px) {
+  .benefits-cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 16px; /* Reduce el espacio */
+  }
+
+  .benefit-card-image {
+    height: 150px; /* Reduce altura de imagen */
+  }
+
+  /* Ajusta tamaño del título */
+  .benefits-title {
+    font-size: 1.75rem;
+  }
+
+  .benefits-section {
+    padding: 60px 16px; /* Reduce padding de la sección */
+  }
+
+  .benefit-card-title {
+    font-size: 1.1rem; /* Reduce tamaño del título de card */
+  }
+}
+
+/* RESPONSIVE - MÓVILES PEQUEÑOS (1 COLUMNA) */
+@media (max-width: 480px) {
+  .benefits-cards-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+
+  .benefit-card-image {
+    height: 200px; /* Aumenta altura de imagen en vista de columna */
+  }
+}
+
+/* ========================================
+SECCIÓN 6: NOTIGABO (REVISTAS)
+   Sección de revistas con cards y botón de descarga
+   
+   CÓMO CAMBIAR EL FONDO:
+   - Busca 'background:' en .notigabo-section
+   - Modifica el gradiente o color según necesites
+   ======================================== */
+
+/* Agregando estilos completos para sección Notigabo (estaban faltando) */
+
+/* Contenedor principal de la sección Notigabo */
+.notigabo-section {
+  /* MODIFICAR AQUÍ EL FONDO DE NOTIGABO */
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Gradiente gris claro */
+  padding: 80px 20px; /* Espaciado vertical */
+  width: 100%; /* Ancho completo */
+}
+
+/* Contenedor interno con ancho máximo */
+.notigabo-container {
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Header de la sección */
+.notigabo-header {
+  text-align: center; /* Centrar texto */
+  margin-bottom: 50px; /* Espacio inferior */
+}
+
+/* Título principal de Notigabo */
+.notigabo-title {
+  font-size: 2.5rem; /* Tamaño grande */
+  font-weight: 700; /* Muy negrita */
+  color: #1e293b; /* Color oscuro */
+  margin-bottom: 15px; /* Espacio inferior */
+  letter-spacing: -0.02em; /* Espaciado entre letras */
+}
+
+/* Descripción de Notigabo */
+.notigabo-description {
+  font-size: 1.1rem; /* Tamaño mediano */
+  color: #64748b; /* Color gris */
+  max-width: 600px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado */
+  line-height: 1.6; /* Altura de línea */
+}
+
+/* Grid de cards de revistas */
+.notigabo-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 30px; /* Espacio entre cards */
+  margin-top: 40px; /* Espacio superior */
+}
+
+/* Card individual de revista */
+.notigabo-card {
+  background: white; /* Fondo blanco */
+  border-radius: 16px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar desbordamiento */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: all 0.3s ease; /* Transición suave */
+  cursor: pointer; /* Cursor de mano */
+}
+
+/* Efecto hover en card */
+.notigabo-card:hover {
+  transform: translateY(-10px); /* Elevar card */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Contenedor de imagen con overlay */
+.card-image-wrapper {
+  position: relative; /* Para posicionar overlay */
+  width: 100%; /* Ancho completo */
+  height: 350px; /* Altura fija */
+  overflow: hidden; /* Ocultar desbordamiento */
+}
+
+/* Imagen de la card */
+.card-image {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  object-fit: cover; /* Cubrir sin deformar */
+  transition: transform 0.4s ease; /* Transición suave */
+}
+
+/* Zoom en imagen al hover */
+.notigabo-card:hover .card-image {
+  transform: scale(1.1); /* Aumentar tamaño */
+}
+
+/* Overlay oscuro sobre imagen */
+.card-overlay {
+  position: absolute; /* Posición absoluta */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%); /* Gradiente oscuro */
+  opacity: 0; /* Invisible por defecto */
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* Mostrar overlay al hover */
+.notigabo-card:hover .card-overlay {
+  opacity: 1; /* Visible */
+}
+
+/* Contenido de texto de la card */
+.notigabo-card .card-content {
+  padding: 25px; /* Espaciado interno */
+  text-align: center; /* Centrar texto */
+}
+
+/* Título de la edición */
+.notigabo-card .card-title {
+  font-size: 1.5rem; /* Tamaño mediano */
+  font-weight: 600; /* Semi-negrita */
+  color: #1e293b; /* Color oscuro */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Subtítulo (fecha) */
+.notigabo-card .card-subtitle {
+  font-size: 0.95rem; /* Tamaño pequeño */
+  color: #64748b; /* Color gris */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Botón de descarga */
+.notigabo-card .card-button {
+  background:  linear-gradient(90deg, #cfbb1b 0%, #f4e87c 100%); /* Gradiente morado */
+  color: #04354b; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 12px 30px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: 600; /* Semi-negrita */
+  border-radius: 25px; /* Bordes muy redondeados */
+  cursor: pointer; /* Cursor de mano */
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); /* Sombra morada */
+}
+
+/* Efecto hover en botón */
+.notigabo-card .card-button:hover {
+  transform: translateY(-2px); /* Elevar ligeramente */
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4); /* Sombra más pronunciada */
+}
+
+/* Animación de entrada */
+.notigabo-card {
+  animation: fadeInUp 0.6s ease-out; /* Animación desde abajo */
+}
+
+/* RESPONSIVE - TABLETS */
+@media (max-width: 900px) {
+  .notigabo-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 25px; /* Reducir espacio */
+  }
+
+  .notigabo-title {
+    font-size: 2rem; /* Reducir tamaño */
+  }
+
+  .card-image-wrapper {
+    height: 300px; /* Altura menor */
+  }
+}
+
+/* RESPONSIVE - MÓVILES */
+@media (max-width: 640px) {
+  .notigabo-section {
+    padding: 60px 16px; /* Reducir padding */
+  }
+
+  .notigabo-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+    gap: 20px; /* Reducir espacio */
+  }
+
+  .notigabo-title {
+    font-size: 1.75rem; /* Reducir tamaño */
+  }
+
+  .card-image-wrapper {
+    height: 280px; /* Altura menor */
+  }
+
+  .notigabo-card .card-content {
+    padding: 20px; /* Reducir padding */
+  }
+}
+
+/* ========================================
+SECCIÓN 7: CONTACTO (BANNER)
+   Banner dividido: contenido izquierda, imagen derecha
+   
+   CÓMO CAMBIAR EL FONDO:
+   - Busca 'background:' en .contacto-banner
+   - Modifica el gradiente o color según necesites
+   ======================================== */
+
+/* Agregando estilos completos para sección de contacto (estaban faltando) */
+
+/* Contenedor principal del banner de contacto */
+.contacto-banner {
+  /* MODIFICAR AQUÍ EL FONDO DE LA SECCIÓN CONTACTO */
+  background: linear-gradient(90deg, #1d698a 0%, #6bbcdb 100%); /* Gradiente morado */
+  padding: 80px 20px; /* Espaciado vertical */
+  width: 100%; /* Ancho completo */
+  min-height: 500px; /* Altura mínima */
+  display: flex; /* Flexbox para centrar */
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* Contenedor interno */
+.contacto-container {
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
+  display: grid; /* Grid layout */
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  gap: 60px; /* Espacio entre columnas */
+  align-items: center; /* Centrar verticalmente */
+  width: 100%; /* Ancho completo */
+}
+
+/* Contenido de texto (lado izquierdo) */
+.contacto-content {
+  color: white; /* Texto blanco */
+}
+
+/* Título principal */
+.contacto-title {
+  font-size: 2.5rem; /* Tamaño grande */
+  font-weight: 700; /* Muy negrita */
+  margin-bottom: 20px; /* Espacio inferior */
+  line-height: 1.2; /* Altura de línea */
+  letter-spacing: -0.02em; /* Espaciado entre letras */
+}
+
+/* Descripción */
+.contacto-description {
+  font-size: 1.1rem; /* Tamaño mediano */
+  line-height: 1.7; /* Altura de línea */
+  margin-bottom: 30px; /* Espacio inferior */
+  opacity: 0.95; /* Ligeramente transparente */
+}
+
+/* Botón de contacto */
+.contacto-button {
+  background: white; /* Fondo blanco */
+  color: #667eea; /* Texto morado */
+  border: none; /* Sin borde */
+  padding: 15px 35px; /* Espaciado interno */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  font-weight: 600; /* Semi-negrita */
+  border-radius: 30px; /* Bordes muy redondeados */
+  cursor: pointer; /* Cursor de mano */
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Efecto hover en botón */
+.contacto-button:hover {
+  transform: translateY(-3px) scale(1.05); /* Elevar y agrandar */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Contenedor de imagen (lado derecho) */
+.contacto-imagen-container {
+  position: relative; /* Para posicionar elementos */
+  display: flex; /* Flexbox para centrar */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Imagen de contacto */
+.contacto-imagen {
+  max-width: 100%; /* Ancho máximo */
+  height: auto; /* Alto automático */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3); /* Sombra pronunciada */
+  /* Animación de flotación */
+  animation: flotar-contacto 4s ease-in-out infinite;
+}
+
+/* Animación de flotación para imagen */
+@keyframes flotar-contacto {
+  0%,
+  100% {
+    transform: translateY(0px); /* Posición inicial/final */
+  }
+  50% {
+    transform: translateY(-20px); /* Posición intermedia (arriba) */
+  }
+}
+
+/* Efecto hover en imagen */
+.contacto-imagen-container:hover .contacto-imagen {
+  transform: scale(1.05) rotate(2deg); /* Agrandar y rotar ligeramente */
+}
+
+/* RESPONSIVE - TABLETS */
+@media (max-width: 900px) {
+  .contacto-container {
+    grid-template-columns: 1fr; /* 1 columna */
+    gap: 40px; /* Reducir espacio */
+    text-align: center; /* Centrar texto */
+  }
+
+  .contacto-title {
+    font-size: 2rem; /* Reducir tamaño */
+  }
+
+  .contacto-description {
+    font-size: 1rem; /* Reducir tamaño */
+  }
+}
+
+/* RESPONSIVE - MÓVILES */
+@media (max-width: 640px) {
+  .contacto-banner {
+    padding: 60px 16px; /* Reducir padding */
+  }
+
+  .contacto-title {
+    font-size: 1.75rem; /* Reducir tamaño */
+  }
+
+  .contacto-button {
+    padding: 12px 30px; /* Reducir padding */
+    font-size: 1rem; /* Reducir tamaño */
+  }
+}
+/* ==========================================
+   ESTILOS DEL FOOTER - COOINDEGABO
+   Dividido en 3 secciones independientes
+   ========================================== */
+
+/* ===== CONTENEDOR GENERAL REUTILIZABLE ===== */
+.footer-container {
+  max-width: 1400px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 0 20px; /* Padding lateral para evitar pegarse a los bordes */
+}
+
+/* ==========================================
+   SECCIÓN 1: 4 COLUMNAS CON FONDO OSCURO
+   ========================================== */
+
+/* Contenedor de la sección de columnas */
+.footer-columns {
+  /* MODIFICAR AQUÍ EL FONDO DEL FOOTER */
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%); /* Gradiente oscuro */
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 60px 0; /* Espaciado vertical: 60px arriba y abajo */
+  width: 100%; /* Ancho completo */
+  margin-top: 80px; /* Separación del contenido superior */
+}
+
+/* ===== GRID DE 4 COLUMNAS ===== */
+.footer-grid {
+  display: grid; /* Uso de CSS Grid para las columnas */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+  gap: 40px; /* Espacio entre columnas */
+}
+
+/* ===== ESTILOS DE CADA COLUMNA ===== */
+.footer-column {
+  animation: fadeInUp 0.6s ease-out; /* Animación de entrada desde abajo */
+}
+
+/* Animación de entrada para las columnas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(20px); /* Desplazado 20px hacia abajo */
+  }
+  to {
+    opacity: 1; /* Totalmente visible */
+    transform: translateY(0); /* Posición final */
+  }
+}
+
+/* ===== TÍTULOS DE LAS COLUMNAS ===== */
+.footer-title {
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: 700; /* Texto en negrita */
+  margin-bottom: 20px; /* Separación con el contenido */
+  color: #fbbf24; /* Color dorado para destacar */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 0.5px; /* Espaciado entre letras */
+  position: relative; /* Para el pseudo-elemento */
+  padding-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Línea decorativa debajo del título */
+.footer-title::after {
+  content: ""; /* Elemento vacío */
+  position: absolute; /* Posicionamiento absoluto */
+  left: 0; /* Alineado a la izquierda */
+  bottom: 0; /* En la parte inferior */
+  width: 40px; /* Ancho de la línea */
+  height: 3px; /* Alto de la línea */
+  background-color: #fbbf24; /* Color dorado */
+  border-radius: 2px; /* Bordes redondeados */
+}
+
+/* ===== CONTENIDO DE TEXTO (COLUMNA 1) ===== */
+.footer-content {
+  line-height: 1.8; /* Altura de línea para legibilidad */
+}
+
+.footer-address {
+  margin-bottom: 15px; /* Separación entre dirección y teléfonos */
+  font-size: 15px; /* Tamaño de fuente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #e5e7eb; /* Color gris claro */
+}
+
+.footer-phone {
+  font-size: 15px; /* Tamaño de fuente */
+  margin-bottom: 8px; /* Separación entre líneas de teléfono */
+  font-weight: 500; /* Peso medio */
+  color: #e5e7eb; /* Color gris claro */
+}
+
+/* ===== LISTAS DE ENLACES (COLUMNAS 2, 3 Y 4) ===== */
+.footer-list {
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+  margin: 0; /* Sin margen */
+}
+
+.footer-list li {
+  margin-bottom: 12px; /* Separación entre elementos de la lista */
+}
+
+/* ===== ENLACES DEL FOOTER ===== */
+.footer-link {
+  color: #e5e7eb; /* Color gris claro */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 14px; /* Tamaño de fuente */
+  transition: all 0.3s ease; /* Transición suave para todos los efectos */
+  display: inline-block; /* Para aplicar transform */
+  position: relative; /* Para el subrayado animado */
+}
+
+/* Efecto hover en enlaces - Cambio de color y desplazamiento */
+.footer-link:hover {
+  color: #fbbf24; /* Cambia a color dorado */
+  transform: translateX(5px); /* Desplazamiento hacia la derecha */
+}
+
+/* Subrayado animado al hacer hover */
+.footer-link::before {
+  content: ""; /* Elemento vacío */
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: -2px; /* Debajo del texto */
+  left: 0; /* Inicio desde la izquierda */
+  width: 0; /* Comienza sin ancho */
+  height: 2px; /* Alto de la línea */
+  background-color: #fbbf24; /* Color dorado */
+  transition: width 0.3s ease; /* Animación del ancho */
+}
+
+/* Expansión del subrayado al hacer hover */
+.footer-link:hover::before {
+  width: 100%; /* Se expande al ancho completo */
+}
+
+/* ==========================================
+   SECCIÓN 2: LOGOS INSTITUCIONALES (SIN ANIMACIONES)
+   ========================================== */
+
+/* Contenedor de la sección de logos */
+.footer-logos {
+  /* MODIFICAR AQUÍ EL FONDO DE LA SECCIÓN DE LOGOS */
+  background-color: #f3f4f6; /* Fondo gris claro */
+  padding: 50px 0; /* Espaciado vertical: 50px arriba y abajo */
+  width: 100%; /* Ancho completo */
+}
+
+/* Contenedor flex para los logos en horizontal */
+.logos-container {
+  display: flex; /* Flexbox para alineación horizontal */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  flex-wrap: wrap; /* Permite que los logos se envuelvan en pantallas pequeñas */
+  gap: 20px; /* Espacio uniforme entre logos */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 0 20px; /* Padding lateral */
+}
+
+/* ===== ELEMENTOS DE LOGO INDIVIDUALES ===== */
+.logo-item {
+  display: flex; /* Flexbox para centrar la imagen */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  /* Sin animaciones ni efectos hover como se solicitó */
+}
+
+/* ===== IMÁGENES DE LOGOS ===== */
+.logo-img {
+  max-width: 100%; /* No excede el ancho del contenedor */
+  height: 70px; /* Altura fija para uniformidad */
+  width: auto; /* Ancho automático para mantener proporción */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+  opacity: 0.7; /* Opacidad reducida para efecto sutil */
+  /* Sin transiciones ni efectos hover como se solicitó */
+}
+
+/* ==========================================
+   SECCIÓN 3: COPYRIGHT
+   ========================================== */
+
+/* Contenedor del copyright */
+.footer-bottom {
+  /* MODIFICAR AQUÍ EL FONDO DEL COPYRIGHT */
+  background-color: #1e293b; /* Fondo oscuro */
+  padding: 25px 0; /* Espaciado vertical: 25px arriba y abajo */
+  text-align: center; /* Texto centrado */
+  width: 100%; /* Ancho completo */
+}
+
+/* Texto del copyright */
+.footer-copyright {
+  font-size: 14px; /* Tamaño de fuente */
+  color: #d1d5db; /* Color gris claro */
+  margin: 0; /* Sin margen */
+  line-height: 1.6; /* Altura de línea */
+  font-weight: 400; /* Peso normal */
+}
+
+/* ==========================================
+   RESPONSIVE - TABLETS (Hasta 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+  /* Grid de columnas: 2 columnas en tablets */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    gap: 30px; /* Espacio reducido */
+  }
+
+  /* Títulos más pequeños */
+  .footer-title {
+    font-size: 16px;
+  }
+
+  /* Logos con menos espacio */
+  .logos-container {
+    gap: 35px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - MÓVILES (Hasta 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  /* Padding reducido en sección de columnas */
+  .footer-columns {
+    padding: 40px 0;
+    margin-top: 50px;
+  }
+
+  /* Grid de columnas: 1 columna en móviles */
+  .footer-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+    gap: 40px;
+  }
+
+  /* Centrado del contenido en móviles */
+  .footer-column {
+    text-align: center;
+  }
+
+  /* Línea decorativa centrada */
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Logos en columna vertical */
+  .logos-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  /* Tamaño de logos reducido */
+  .logo-img {
+    height: 10px;
+  }
+
+  /* Copyright más pequeño */
+  .footer-copyright {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - MÓVILES PEQUEÑOS (Hasta 480px)
+   ========================================== */
+@media (max-width: 480px) {
+  /* Títulos aún más pequeños */
+  .footer-title {
+    font-size: 15px;
+  }
+
+  /* Contenido de texto más pequeño */
+  .footer-link,
+  .footer-address,
+  .footer-phone {
+    font-size: 13px;
+  }
+
+  /* Logos más pequeños */
+  .logo-img {
+    height: 50px;
+  }
+
+  /* Padding reducido en sección de logos */
+  .footer-logos {
+    padding: 35px 0;
+  }
+}
+.banerQS {
+  width: 100rem;
+  height: 20rem;
+  background-color: rgb(244, 241, 241);
+  display: flex;
+  flex-direction: row;
+}
+
+.imgQS {
+  margin: auto;
+  width: 30rem;
+  left: 40px;
+}
+
+.TexQS {
+  width: 50rem;
+  padding: 50px 50px;
+  margin: 20px 120px;
+  left: 50px;
+}
+/* ====================================
+   ESTILOS PARA ASISTENTE VIRTUAL FLOTANTE
+   Ubicado en la parte superior izquierda
+   ==================================== */
+
+/* Contenedor principal del asistente */
+.asistente-virtual-container {
+  /* Posición fija para que permanezca visible al hacer scroll */
+  position: fixed;
+
+  /* UBICACIÓN EN LA PARTE INFERIOR DERECHA */
+  /* MODIFICAR ESTAS DOS LÍNEAS PARA CAMBIAR POSICIÓN */
+  bottom: 20px; /* Distancia desde abajo - Cambiar a 'top' para parte superior */
+  right: 20px; /* Distancia desde la derecha - Cambiar a 'left' para parte izquierda */
+
+  /* Z-index alto para que esté sobre otros elementos */
+  z-index: 1000;
+}
+
+/* Contenedor del asistente con efectos */
+.asistente-virtual {
+  /* Posición relativa para posicionar el tooltip */
+  position: relative;
+
+  /* Cursor pointer para indicar que es clickeable */
+  cursor: pointer;
+
+  /* Animación de flotación continua */
+  /* MODIFICAR EL NÚMERO (3s) PARA CAMBIAR VELOCIDAD */
+  animation: flotar-asistente 3s ease-in-out infinite; /* 3 segundos por ciclo */
+}
+
+/* Imagen del asistente */
+.asistente-imagen {
+  /* TAMAÑO DE LA IMAGEN */
+  /* MODIFICAR AQUÍ PARA CAMBIAR TAMAÑO */
+  width: 100px; /* Ancho - Cambia este valor para hacer más grande/pequeño */
+  height: 100px; /* Alto - Debe ser igual al ancho para mantener círculo */
+
+  /* Bordes redondeados */
+  border-radius: 50%; /* Hace la imagen circular */
+
+  /* Sombra para dar profundidad */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  /* Transición suave para efectos hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Fondo blanco por si la imagen tiene transparencia */
+  /*background: white;*/
+
+  /* Padding interno */
+  padding: 5px;
+}
+
+/* Efecto hover en la imagen del asistente */
+.asistente-virtual:hover .asistente-imagen {
+  /* Aumenta ligeramente el tamaño */
+  transform: scale(1.1);
+
+  /* Sombra más pronunciada */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Tooltip que aparece al pasar el cursor */
+.asistente-tooltip {
+  /* Posición absoluta respecto al contenedor padre */
+  position: absolute;
+
+  /* Ubicación a la IZQUIERDA del asistente (para posición inferior derecha) */
+  /* SI CAMBIAS LA POSICIÓN DEL ASISTENTE, AJUSTA ESTO: */
+  /* Para inferior derecha (actual): left: auto; right: 100%; */
+  /* Para inferior izquierda: right: auto; left: 100%; */
+  left: auto;
+  right: 100%; /* Se posiciona completamente a la izquierda del asistente */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%); /* Ajuste fino del centrado vertical */
+
+  /* Espaciado desde el asistente */
+  /* MODIFICAR AQUÍ PARA AJUSTAR SEPARACIÓN */
+  margin-right: 15px; /* Espacio entre tooltip y asistente */
+
+  /* Estilo visual del tooltip */
+  background: linear-gradient(90deg, #479154 0%, #84CF94 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+
+  /* Ancho del tooltip */
+  min-width: 150px;
+
+  /* Sombra */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  /* Oculto por defecto */
+  opacity: 0;
+  visibility: hidden;
+
+  /* Transición suave al aparecer */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+  /* Pequeño desplazamiento inicial */
+  transform: translateY(-50%) translateX(10px);
+
+  /* Prevenir salto de línea */
+  white-space: nowrap;
+}
+
+/* Flecha del tooltip apuntando al asistente */
+.asistente-tooltip::after {
+  content: "";
+  position: absolute;
+
+  /* Posición de la flecha en el lado DERECHO del tooltip (apuntando al asistente) */
+  right: -10px; /* Fuera del tooltip, hacia el asistente */
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* Triángulo usando bordes */
+  border: 10px solid transparent;
+  border-left-color: #764ba2; /* Color que coincide con el gradiente */
+}
+
+/* Mostrar tooltip al pasar el cursor sobre el asistente */
+.asistente-virtual:hover .asistente-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0); /* Desliza hacia la posición final */
+}
+
+/* Estilo de texto dentro del tooltip */
+.asistente-tooltip p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Animación de flotación */
+@keyframes flotar-asistente {
+  0%,
+  100% {
+    transform: translateY(0); /* Posición inicial y final */
+  }
+  50% {
+    /* MODIFICAR AQUÍ PARA MÁS O MENOS MOVIMIENTO */
+    transform: translateY(-15px); /* Movimiento hacia arriba - Aumenta el valor para más movimiento */
+  }
+}
+
+/* ====================================
+   RESPONSIVE - ADAPTACIÓN A MÓVILES
+   ==================================== */
+
+/* Tablets y dispositivos medianos */
+@media (max-width: 768px) {
+  /* Posición del asistente en tablets */
+  .asistente-virtual-container {
+    /* MANTENER EN INFERIOR DERECHA PARA MÓVILES */
+    bottom: 20px; /* Parte inferior */
+    right: 15px; /* Cerca del borde derecho */
+  }
+
+  .asistente-imagen {
+    width: 70px; /* Tamaño reducido en tablets */
+    height: 70px;
+  }
+
+  .asistente-tooltip {
+    font-size: 12px;
+    min-width: 120px;
+    padding: 10px 15px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  /* Posición del asistente en móviles pequeños */
+  .asistente-virtual-container {
+    /* MANTENER EN INFERIOR DERECHA */
+    bottom: 15px; /* Parte inferior */
+    right: 10px; /* Cerca del borde derecho */
+  }
+
+  .asistente-imagen {
+    width: 60px; /* Más pequeño en móviles */
+    height: 60px;
+  }
+
+  /* En móviles, el tooltip aparece ARRIBA para no salirse de pantalla */
+  .asistente-tooltip {
+    /* Resetear posicionamiento horizontal */
+    left: 50%;
+    right: auto;
+
+    /* Posicionar arriba del asistente */
+    top: auto;
+    bottom: 100%;
+
+    /* Centrar horizontalmente */
+    transform: translateX(-50%);
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Ajustar flecha del tooltip para que apunte hacia abajo */
+  .asistente-tooltip::after {
+    right: auto;
+    left: 50%;
+    top: 100%; /* Flecha en la parte inferior del tooltip */
+    transform: translateX(-50%);
+    border-left-color: transparent;
+    border-top-color: #764ba2; /* Flecha apuntando hacia abajo */
+  }
+
+  /* Ajustar transformación del hover */
+  .asistente-virtual:hover .asistente-tooltip {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ========================================
+   SECCIÓN 4: CARDS DE SERVICIOS FLOTANTES
+   Grid de servicios con animación al scroll
+   
+   CÓMO CAMBIAR EL FONDO:
+   - Busca 'background:' en .floating-cards-section
+   - Modifica el gradiente o color según necesites
+   ======================================== */
+
+/* Añadir todos los estilos faltantes de la sección 4 */
+
+.floating-cards-section {
+  /* MODIFICAR AQUÍ EL FONDO DE LA SECCIÓN */
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* <-- CAMBIAR AQUÍ el fondo */
+  padding: 80px 0; /* Padding vertical generoso */
+  position: relative;
+}
+
+.section-container {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 0 20px; /* Padding horizontal */
+  display: grid; /* Usar CSS Grid */
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 60px; /* Espacio entre columnas */
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* Columna izquierda - Contenido principal */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Espacio entre elementos */
+}
+
+.main-title {
+  font-size: 2.5rem; /* Tamaño grande */
+  font-weight: 700; /* Muy negrita */
+  color: #04354b; /* Color azul oscuro */
+  line-height: 1.2; /* Altura de línea compacta */
+  margin: 0;
+}
+
+.main-description {
+  font-size: 1.1rem; /* Tamaño mediano */
+  color: black; /* Color gris */
+  line-height: 1.6; /* Altura de línea cómoda */
+  margin: 0;
+}
+
+.image-wrapper {
+  width: 100%; /* Ancho completo */
+  border-radius: 15px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar desbordamiento */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra pronunciada */
+}
+
+.image-wrapper img {
+  width: 100%; /* Ancho completo */
+  height: auto; /* Alto automático */
+  display: block; /* Eliminar espacio inferior */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05); /* Agrandar al hacer hover */
+}
+
+/* Columna derecha - Grid de cards */
+.right-content {
+  display: grid;
+  /* Cambiar de 1 columna a 2 columnas en grid */
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 25px; /* Espacio entre cards */
+}
+
+/* Card flotante individual */
+.floating-card {
+  background: white; /* Fondo blanco */
+  padding: 30px; /* Padding interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  transition: all 0.3s ease; /* Transición suave */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Sutil borde */
+}
+
+.floating-card:hover {
+  transform: translateY(-5px); /* Elevar al hacer hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Icono de la card */
+.card-icon {
+  width: 60px; /* Ancho fijo */
+  height: 60px; /* Alto fijo */
+  border-radius: 12px; /* Bordes redondeados */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Margen inferior */
+  color: white; /* Color del icono */
+}
+
+.card-icon svg {
+  width: 32px; /* Ancho del SVG */
+  height: 32px; /* Alto del SVG */
+}
+
+/* Título de la card */
+.card-title {
+  font-size: 1.3rem; /* Tamaño mediano-grande */
+  font-weight: 600; /* Semi-negrita */
+  color: #04354b; /* Color azul oscuro */
+  margin: 0 0 15px 0; /* Margen inferior */
+}
+
+/* Descripción de la card */
+.card-description {
+  font-size: 0.95rem; /* Tamaño pequeño-mediano */
+  color: black; /* Color gris */
+  line-height: 1.6; /* Altura de línea cómoda */
+  margin: 0 0 20px 0; /* Margen inferior */
+}
+
+/* Enlace de la card */
+.card-link {
+  display: inline-flex; /* Inline flex para alinear icono */
+  align-items: center;
+  gap: 8px; /* Espacio entre texto e icono */
+  color: #cfbb1b; /* Color azul */
+  font-weight: 500; /* Peso medio */
+  font-size: 0.95rem;
+  text-decoration: none; /* Sin subrayado */
+  transition: all 0.3s ease;
+}
+
+.card-link:hover {
+  color: #2563eb; /* Azul más oscuro al hover */
+  gap: 12px; /* Aumentar espacio al hover */
+}
+
+.card-link svg {
+  width: 16px; /* Ancho del icono */
+  height: 16px; /* Alto del icono */
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover svg {
+  transform: translateX(4px); /* Mover icono a la derecha */
+}
+
+/* Animación al scroll */
+.scroll-animate {
+  opacity: 0; /* Invisible inicialmente */
+  transform: translateY(30px); /* Desplazado hacia abajo */
+  transition: all 0.6s ease;
+}
+
+.scroll-animate.is-visible {
+  opacity: 1; /* Visible */
+  transform: translateY(0); /* Posición normal */
+}
+
+/* Responsive para sección 4 */
+@media (max-width: 1024px) {
+  .section-container {
+    grid-template-columns: 1fr; /* Una columna en tablets */
+    gap: 40px;
+  }
+
+  .main-title {
+    font-size: 2rem; /* Reducir tamaño */
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-cards-section {
+    padding: 60px 0; /* Reducir padding vertical */
+  }
+
+  .section-container {
+    gap: 30px;
+  }
+
+  .main-title {
+    font-size: 1.8rem; /* Reducir más el tamaño */
+  }
+
+  .main-description {
+    font-size: 1rem;
+  }
+
+  .floating-card {
+    padding: 25px; /* Reducir padding */
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+  /* Ajustes para tablets */
+  .redes-container {
+    flex-direction: column; /* Apilar verticalmente */
+    gap: 20px; /* Reducir espacio */
+  }
+
+  .lista-enlaces {
+    justify-content: center; /* Centrar enlaces */
+    gap: 20px; /* Reducir espacio */
+  }
+
+  .slide-content {
+    flex-direction: column; /* Apilar contenido */
+    text-align: center; /* Centrar texto */
+    gap: 30px; /* Reducir espacio */
+  }
+
+  .slide-titulo {
+    font-size: 2.5rem; /* Reducir tamaño */
+  }
+
+  .portafolio-container {
+    flex-direction: column; /* Apilar verticalmente */
+    gap: 40px; /* Reducir espacio */
+    text-align: center; /* Centrar contenido */
+  }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+  /* Menú hamburguesa ya configurado en líneas 350-460 */
+
+  /* Reorganización del contenedor */
+  .navegacion-container {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  /* Mostrar botón hamburguesa */
+  .menu-mobile-toggle {
+    display: flex;
+  }
+
+  /* CRUCIAL: Desactivar hover de escritorio en móvil */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    max-height: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* Navegación principal en móvil - ESTILO DE OVERLAY */
+  .navegacion-principal {
+    /* Posicionamiento */
+    position: fixed;
+    top: 80px; /* Ajustar según altura de tu header */
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    /* Visibilidad y estilo */
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Estado inicial: OCULTO */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+
+    /* Transiciones suaves */
+    transition: all 0.3s ease;
+
+    /* Z-index */
+    z-index: 999;
+  }
+
+  /* MOSTRAR navegación cuando está activa */
+  .navegacion-principal.active {
+    max-height: calc(100vh - 80px);
+    opacity: 1;
+    transform: translateY(0);
+    overflow-y: auto;
+  }
+
+  /* Lista de navegación - vertical */
+  .nav-lista-principal {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  /* Items de navegación */
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  /* Enlaces - más grandes para facilitar toque */
+  .nav-link {
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1e3a8a;
+    font-size: 16px;
+  }
+
+  /* Submenús en móvil - layout vertical */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    background: #f8f9fa;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+
+    /* Estado inicial: OCULTO */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    /* Transición suave */
+    transition: all 0.3s ease;
+  }
+
+  /* Mostrar submenú cuando dropdown está activo */
+  .nav-item.dropdown-active .dropdown-menu {
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  /* Rotar icono chevron cuando está activo */
+  .nav-item.dropdown-active .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
+  /* Enlaces del submenú */
+  .dropdown-link {
+    padding: 12px 20px;
+    display: block;
+    color: #495057;
+    font-size: 14px;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .dropdown-link:hover {
+    background: #e9ecef;
+    color: #1e3a8a;
+  }
+
+  /* SECCIÓN 3: SLIDER PROMOCIONAL MÓVIL */
+  .slider-container {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .slide-titulo {
+    font-size: 2rem;
+  }
+
+  .slide-descripcion {
+    font-size: 1rem;
+  }
+
+  .slide-boton {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .slider-arrow-prev {
+    left: 15px;
+  }
+
+  .slider-arrow-next {
+    right: 15px;
+  }
+
+  /* SECCIÓN 4: PORTAFOLIO DE PRODUCTOS MÓVIL */
+  .portafolio-titulo {
+    font-size: 2rem;
+  }
+
+  .productos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Ajustes de noticas */
+  .notigabo-titulo {
+    font-size: 2rem;
+  }
+
+  .notigabo-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Ajustes de formulario */
+  .formulario-titulo {
+    font-size: 2rem;
+  }
+
+  .formulario-principal {
+    padding: 25px;
+  }
+
+  .formulario-fila {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Asistente virtual móvil - inferior derecha */
+  .asistente-virtual {
+    bottom: 20px;
+    right: 20px;
+    top: auto;
+    left: auto;
+  }
+
+  .asistente-imagen {
+    width: 60px;
+    height: 60px;
+  }
+
+  .asistente-tooltip {
+    left: auto;
+    right: 100%;
+    margin-right: 15px;
+    margin-left: 0;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+/* ==========================================
+   MEDIA QUERIES GLOBALES - RESPONSIVE
+   Ajustes generales para dispositivos móviles
+   ========================================== */
+
+@media (max-width: 768px) {
+  /* Eliminado el bloque duplicado de media query móvil que estaba aquí causando conflictos con los submenús */
+  /* Líneas 2155-2280 ELIMINADAS COMPLETAMENTE */
+  /* Motivo: Usaba selector incorrecto, tenía opacity: 0, hover con display: none causando titilación */
+
+  /* El menú hamburguesa se mantiene visible (ya configurado en líneas 354-470) */
+  .menu-mobile-toggle {
+    display: flex; /* Mostrar menú hamburguesa */
+  }
+
+  /* Ajustes de ticker */
+  .ticker-container {
+    gap: 30px; /* Reducir espacio */
+    padding: 0 15px; /* Reducir padding */
+  }
+
+  .ticker-item {
+    padding: 6px 12px; /* Reducir padding */
+  }
+
+  .ticker-label {
+    font-size: 12px; /* Reducir fuente */
+  }
+
+  .ticker-value-text {
+    font-size: 11px; /* Reducir fuente */
+  }
+
+  /* Ajustes de redes sociales */
+  .redes-container {
+    padding: 0 15px; /* Reducir padding */
+    justify-content: center; /* Centrar contenido cuando se envuelve */
+  }
+
+  .redes-sociales,
+  .enlaces-horizontales {
+    width: 100%; /* Ocupar ancho completo */
+    justify-content: center; /* Centrar */
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+
+  .redes-sociales:last-child,
+  .enlaces-horizontales:last-child {
+    margin-bottom: 0; /* Sin margen para el último elemento */
+  }
+
+  .redes-titulo {
+    font-size: 14px; /* Reducir tamaño de título */
+  }
+
+  .iconos-redes {
+    gap: 12px; /* Reducir espacio */
+    margin-top: 10px; /* Espacio superior */
+  }
+
+  .icono-red {
+    width: 35px; /* Reducir tamaño */
+    height: 35px; /* Reducir tamaño */
+    font-size: 16px; /* Reducir icono */
+  }
+
+  .lista-enlaces {
+    gap: 15px; /* Reducir espacio */
+    justify-content: center; /* Centrar enlaces */
+  }
+
+  .enlace-servicio {
+    font-size: 12px; /* Reducir fuente */
+    padding: 6px 12px; /* Reducir padding */
+  }
+
+  /* Ajustes de slider */
+  .slider-container {
+    height: 60vh; /* Reducir alto */
+    min-height: 400px; /* Reducir alto mínimo */
+  }
+
+  .slide-titulo {
+    font-size: 2rem; /* Reducir tamaño */
+  }
+
+  .slide-descripcion {
+    font-size: 1rem; /* Reducir tamaño */
+  }
+
+  .slide-boton {
+    padding: 12px 24px; /* Reducir padding */
+    font-size: 1rem; /* Reducir fuente */
+  }
+
+  .slider-arrow {
+    width: 40px; /* Reducir tamaño */
+    height: 40px; /* Reducir tamaño */
+    font-size: 16px; /* Reducir icono */
+  }
+
+  .slider-arrow-prev {
+    left: 15px; /* Ajustar posición */
+  }
+
+  .slider-arrow-next {
+    right: 15px; /* Ajustar posición */
+  }
+
+  /* Ajustes de portafolio */
+  .portafolio-titulo {
+    font-size: 2rem; /* Reducir tamaño */
+  }
+
+  .productos-grid {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 20px; /* Reducir espacio */
+  }
+
+  /* Ajustes de noticias */
+  .notigabo-titulo {
+    font-size: 2rem; /* Reducir tamaño */
+  }
+
+  .notigabo-grid {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 20px; /* Reducir espacio */
+  }
+
+  /* Ajustes de formulario */
+  .formulario-titulo {
+    font-size: 2rem; /* Reducir tamaño */
+  }
+
+  .formulario-principal {
+    padding: 25px; /* Reducir padding */
+  }
+
+  .formulario-fila {
+    flex-direction: column; /* Apilar campos */
+    gap: 15px; /* Reducir espacio */
+  }
+}
+
+/* ========================================
+   RESPONSIVE: MÓVILES (≤ 480px)
+   ======================================== */
+
+/* Eliminado otro bloque duplicado de media query móvil que estaba causando conflictos con los submenús */
+/* Líneas 2580-2650 ELIMINADAS COMPLETAMENTE */
+/* Motivo: Duplicaba estilos de dropdown con selector incorrecto .nav-item.dropdown-active */
+
+@media (max-width: 480px) {
+  /* Sección de redes sociales */
+  .redes-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  /* Contenedor de la navegación principal en pantallas pequeñas */
+  .navegacion-container {
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 15px; /* Padding más pequeño en pantallas muy pequeñas */
+  }
+
+  /* El botón hamburguesa se mantiene visible */
+  .menu-mobile-toggle {
+    display: flex;
+  }
+
+  /* La navegación principal se oculta hasta que se activa */
+  .navegacion-principal {
+    position: fixed; /* Fija en la pantalla */
+    top: 70px; /* Debajo del header (ajustar según altura real) */
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 0; /* Oculta inicialmente */
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 999; /* Por encima de otros elementos */
+  }
+
+  /* Muestra la navegación cuando está activa */
+  .navegacion-principal.active {
+    max-height: calc(100vh - 70px); /* Altura completa menos el header */
+    opacity: 1;
+    transform: translateY(0);
+    overflow-y: auto; /* Permite scroll si el menú es muy largo */
+  }
+
+  /* Estilos para la lista de navegación en móvil */
+  .nav-lista-principal {
+    flex-direction: column; /* Vertical */
+    width: 100%;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  /* Cada item de la lista */
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid #e9ecef; /* Separador */
+  }
+
+  /* Enlaces de navegación en móvil - más grandes y claros */
+  .nav-link {
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Espacio entre texto y icono */
+    align-items: center;
+    color: #1e3a8a; /* Color primario */
+    font-size: 15px;
+  }
+
+  /* Estilos para submenús (dropdowns) en móvil */
+  .dropdown-menu {
+    position: static; /* No absoluto */
+    width: 100%;
+    background: #f8f9fa; /* Fondo ligeramente distinto */
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    max-height: 0; /* Oculto por defecto */
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Muestra el submenú cuando el item padre tiene la clase 'dropdown-active' */
+  .nav-item.dropdown-active .dropdown-menu {
+    max-height: 1000px; /* Altura suficiente para el contenido */
+    opacity: 1;
+  }
+
+  /* Rotación del icono 'chevron' para indicar apertura/cierre */
+  .nav-item.dropdown-active .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
+  /* Enlaces dentro de submenús */
+  .dropdown-link {
+    padding: 12px 20px;
+    display: block;
+    color: #495057;
+    font-size: 14px;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .dropdown-link:hover {
+    background: #e9ecef;
+    color: #007bff;
+  }
+
+  /* Ajuste para el último enlace del submenú */
+  .dropdown-link:last-child {
+    border-bottom: none;
+  }
+
+  /* Banner promocional en móviles pequeños */
+  .slider-container {
+    height: 50vh; /* Altura reducida */
+    min-height: 350px;
+  }
+
+  .slide-titulo {
+    font-size: 1.8rem; /* Título más pequeño */
+  }
+
+  .slide-descripcion {
+    font-size: 0.95rem; /* Descripción más pequeña */
+  }
+
+  .slide-boton {
+    padding: 10px 20px; /* Botón más pequeño */
+    font-size: 0.9rem;
+  }
+
+  /* Flechas del slider en móviles pequeños */
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .slider-arrow-prev {
+    left: 10px;
+  }
+
+  .slider-arrow-next {
+    right: 10px;
+  }
+
+  /* Portafolio en móviles pequeños */
+  .portafolio-titulo {
+    font-size: 1.8rem; /* Título más pequeño */
+  }
+
+  .productos-grid {
+    gap: 15px; /* Espacio reducido */
+  }
+
+  /* Notigabo en móviles pequeños */
+  .notigabo-titulo {
+    font-size: 1.8rem; /* Título más pequeño */
+  }
+
+  /* Formulario de contacto en móviles pequeños */
+  .formulario-titulo {
+    font-size: 1.8rem; /* Título más pequeño */
+  }
+
+  .formulario-principal {
+    padding: 20px; /* Padding reducido */
+  }
+
+  /* Asistente virtual en móviles pequeños */
+  .asistente-virtual-container {
+    bottom: 10px; /* Más cerca del borde inferior */
+    right: 10px; /* Más cerca del borde derecho */
+  }
+
+  .asistente-imagen {
+    width: 50px; /* Imagen más pequeña */
+    height: 50px;
+  }
+
+  .asistente-tooltip {
+    min-width: 120px; /* Ancho mínimo */
+    padding: 8px 10px; /* Padding reducido */
+    font-size: 12px; /* Fuente más pequeña */
+  }
+
+  /* Asegurar que la flecha del tooltip funcione correctamente */
+  .asistente-tooltip::after {
+    border-left-color: #764ba2; /* Coincidir con el gradiente */
+  }
+}
+
+/* ============================================
+   ESTILOS SECCION GANADOR AHORRADOR FELIZ
+   ============================================
+   
+   INDICE:
+   1. Variables CSS (colores, espaciados, etc.)
+   2. Estilos base de la seccion
+   3. Contenedor Grid principal
+   4. Estilos del contenido (izquierda)
+   5. Animacion del nombre del ganador
+   6. Estilos del boton
+   7. Estilos de los logos
+   8. Estilos de la imagen (derecha)
+   9. Elementos decorativos
+   10. Media Queries (responsive)
+   
+============================================ */
+
+/* ============================================
+   1. VARIABLES CSS
+   ============================================
+   PARA CAMBIAR COLORES: Modifica los valores aqui
+   PARA CAMBIAR ESPACIADOS: Ajusta los valores de spacing
+============================================ */
+:root {
+    /* Colores principales */
+    --color-verde-primario: #388e3c;      /* Verde Cooindegabo */
+    --color-verde-oscuro: #2e7d32;        /* Verde mas oscuro para hover */
+    --color-verde-claro: #e8f5e9;         /* Verde muy claro para fondos */
+    --color-dorado: #ffc107;              /* Dorado para destacar ganador */
+    --color-dorado-oscuro: #ff8f00;       /* Dorado oscuro */
+    --color-naranja: #ff6f00;             /* Naranja para acentos */
+    
+    /* Colores de texto */
+    --color-texto-oscuro: #1a1a1a;
+    --color-texto-gris: #555555;
+    --color-texto-claro: #ffffff;
+    
+    /* Fondos */
+    --color-fondo-seccion: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 50%, #fff8e1 100%);
+    --color-fondo-blanco: #ffffff;
+    
+    /* Espaciados */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+    
+    /* Bordes */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 30px;
+    
+    /* Sombras */
+    --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --sombra-fuerte: 0 15px 50px rgba(0, 0, 0, 0.2);
+    --sombra-dorada: 0 8px 30px rgba(255, 193, 7, 0.4);
+    
+    /* Transiciones */
+    --transicion-rapida: 0.2s ease;
+    --transicion-normal: 0.3s ease;
+    --transicion-lenta: 0.5s ease;
+    
+    /* Fuentes */
+    --fuente-principal: 'Poppins', sans-serif;
+}
+
+/* ============================================
+   2. ESTILOS BASE DE LA SECCION
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+}
+
+.ganador-section {
+    /* Fondo con gradiente suave */
+    background: var(--color-fondo-seccion);
+    
+    /* Espaciado interno */
+    /* PARA CAMBIAR ALTURA: Modifica padding-top y padding-bottom */
+    padding: var(--spacing-xxl) var(--spacing-lg);
+    
+    /* Altura minima */
+    min-height: 100vh;
+    
+    /* Centrar contenido verticalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Posicion relativa para elementos decorativos */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo decorativo con patron */
+.ganador-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Patron de puntos sutiles */
+    background-image: radial-gradient(circle, rgba(56, 142, 60, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ============================================
+   3. CONTENEDOR GRID PRINCIPAL
+   ============================================
+   PARA CAMBIAR DISTRIBUCION DE COLUMNAS:
+   - Modifica grid-template-columns
+   - 1fr 1fr = 50% cada columna
+   - 1fr 1.2fr = contenido mas pequeno, imagen mas grande
+   - 1.2fr 1fr = contenido mas grande, imagen mas pequena
+============================================ */
+.ganador-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    
+    /* Grid de 2 columnas */
+    display: grid;
+    grid-template-columns: 1.2fr 1.fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    
+    position: relative;
+    z-index: 1;
+}
+
+/* Clases auxiliares para cambiar orden */
+/* PARA INVERTIR POSICIONES: Agrega estas clases en el HTML */
+.orden-1 {
+    order: 1;
+}
+
+.orden-2 {
+    order: 2;
+}
+
+/* ============================================
+   4. ESTILOS DEL CONTENIDO (IZQUIERDA)
+   ============================================ */
+.ganador-contenido {
+    /* Espaciado interno */
+    padding: var(--spacing-lg);
+}
+
+/* Titulo principal */
+.ganador-titulo {
+    /* Tamano de fuente */
+    /* PARA CAMBIAR TAMANO: Modifica font-size */
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-verde-primario);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    
+    /* Mostrar en bloque para el span */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Periodo del sorteo (Noviembre - Diciembre) */
+.ganador-periodo {
+    /* PARA CAMBIAR COLOR: Modifica color */
+    color: var(--color-dorado-oscuro);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: var(--spacing-xs);
+}
+
+/* ============================================
+   5. ANIMACION DEL NOMBRE DEL GANADOR
+   ============================================
+   PARA CAMBIAR ANIMACION:
+   - Modifica @keyframes brilloNombre
+   - Cambia animation-duration para velocidad
+   - Cambia los colores en el gradiente
+============================================ */
+.ganador-nombre {
+    /* Tamano grande y destacado */
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-sm);
+    
+    /* Gradiente animado en el texto */
+    background: linear-gradient(
+        90deg,
+        var(--color-dorado) 0%,
+        var(--color-naranja) 25%,
+        var(--color-dorado) 50%,
+        var(--color-naranja) 75%,
+        var(--color-dorado) 100%
+    );
+    background-size: 200% auto;
+    
+    /* Aplicar gradiente al texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Animacion de brillo */
+    animation: brilloNombre 3s linear infinite;
+    
+    /* Sombra de texto para profundidad */
+    filter: drop-shadow(2px 2px 4px rgba(255, 152, 0, 0.3));
+    
+    /* Efecto de resplandor */
+    position: relative;
+}
+
+/* Resplandor detras del nombre */
+.ganador-nombre::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-dorado), var(--color-naranja));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(8px);
+    opacity: 0.5;
+    z-index: -1;
+    animation: pulsoResplandor 2s ease-in-out infinite;
+}
+
+/* Animacion de brillo del nombre */
+@keyframes brilloNombre {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Animacion de pulso del resplandor */
+@keyframes pulsoResplandor {
+    0%, 100% {
+        opacity: 0.3;
+        filter: blur(8px);
+    }
+    50% {
+        opacity: 0.6;
+        filter: blur(12px);
+    }
+}
+
+/* Agencia del ganador */
+.ganador-agencia {
+    font-size: 1.3rem;
+    color: var(--color-texto-gris);
+    margin-bottom: var(--spacing-md);
+}
+
+.ganador-agencia strong {
+    color: var(--color-verde-primario);
+    font-weight: 600;
+}
+
+/* Mensaje motivacional */
+.ganador-mensaje {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-texto-oscuro);
+    margin-bottom: var(--spacing-lg);
+    
+    /* Estilo cursiva elegante */
+    font-style: italic;
+}
+
+/* ============================================
+   6. ESTILOS DEL BOTON
+   ============================================
+   PARA CAMBIAR COLOR DEL BOTON:
+   - Modifica background en .ganador-boton
+   - Modifica background en .ganador-boton:hover
+============================================ */
+.ganador-boton {
+    /* Mostrar como inline-flex */
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    
+    /* Espaciado interno */
+    padding: var(--spacing-md) var(--spacing-xl);
+    
+    /* Color de fondo verde */
+    background: linear-gradient(135deg, var(--color-verde-primario) 0%, var(--color-verde-oscuro) 100%);
+    color: var(--color-texto-claro);
+    
+    /* Bordes redondeados */
+    border-radius: var(--border-radius-xl);
+    
+    /* Sin subrayado */
+    text-decoration: none;
+    
+    /* Fuente */
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+    /* Sombra */
+    box-shadow: var(--sombra-media);
+    
+    /* Transicion suave */
+    transition: all var(--transicion-normal);
+    
+    /* Cursor pointer */
+    cursor: pointer;
+    
+    margin-bottom: var(--spacing-md);
+}
+
+/* Hover del boton */
+.ganador-boton:hover {
+    /* Elevar el boton */
+    transform: translateY(-3px);
+    
+    /* Sombra mas pronunciada */
+    box-shadow: var(--sombra-fuerte);
+    
+    /* Color mas claro */
+    background: linear-gradient(135deg, var(--color-verde-oscuro) 0%, var(--color-verde-primario) 100%);
+}
+
+/* Icono del boton */
+.boton-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: transform var(--transicion-normal);
+}
+
+.boton-icono svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Animacion del icono en hover */
+.ganador-boton:hover .boton-icono {
+    transform: translateX(5px);
+}
+
+/* Texto legal */
+.ganador-legal {
+    font-size: 0.95rem;
+    color: var(--color-texto-gris);
+    margin-bottom: var(--spacing-lg);
+    
+    /* Estilo sutil */
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* ============================================
+   7. ESTILOS DE LOS LOGOS
+   ============================================
+   PARA CAMBIAR TAMANO DE LOGOS:
+   - Modifica max-width en .logo-imagen
+   PARA AGREGAR MAS LOGOS:
+   - Duplica el div .logo-item en el HTML
+============================================ */
+.ganador-logos {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.logo-item {
+    /* Contenedor del logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-imagen {
+    /* Tamano maximo del logo */
+    /* PARA CAMBIAR TAMANO: Modifica max-width y max-height */
+    max-width: 120px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    
+    /* Filtro para mantener contraste */
+    filter: grayscale(0%);
+    opacity: 0.9;
+    
+    /* Transicion suave */
+    transition: all var(--transicion-normal);
+}
+
+/* Hover en logos */
+.logo-imagen:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   8. ESTILOS DE LA IMAGEN (DERECHA)
+   ============================================
+   PARA CAMBIAR TAMANO DE IMAGEN:
+   - Modifica max-width en .ganador-imagen
+   PARA CAMBIAR FORMA DEL MARCO:
+   - Modifica border-radius en .imagen-marco
+============================================ */
+.ganador-imagen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg);
+}
+
+.imagen-marco {
+    /* Posicion relativa para decoraciones */
+    position: relative;
+    
+    /* Borde decorativo dorado */
+    border: 5px solid var(--color-dorado);
+    
+    /* Bordes redondeados */
+    /* PARA CAMBIAR FORMA: Modifica border-radius */
+    /* 50% = circulo, 20px = rectangulo redondeado */
+    border-radius: var(--border-radius-lg);
+    
+    /* Sombra dorada */
+    box-shadow: var(--sombra-dorada);
+    
+    /* Fondo blanco */
+    background: var(--color-fondo-blanco);
+    
+    /* Padding interno */
+    padding: 8px;
+    
+    /* Animacion de flotacion */
+    animation: flotarImagen 4s ease-in-out infinite;
+}
+
+/* Animacion de flotacion de la imagen */
+@keyframes flotarImagen {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Imagen del ganador */
+.ganador-imagen {
+    /* Tamano de la imagen */
+    /* PARA CAMBIAR TAMANO: Modifica width y max-width */
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    
+    /* Bordes redondeados */
+    border-radius: calc(var(--border-radius-lg) - 5px);
+    
+    /* Asegurar que no se deforme */
+    object-fit: cover;
+    
+    /* Mostrar como bloque */
+    display: block;
+}
+
+/* ============================================
+   9. ELEMENTOS DECORATIVOS
+   ============================================
+   PARA OCULTAR DECORACIONES:
+   - Agrega display: none; a la clase correspondiente
+============================================ */
+
+/* Circulos decorativos */
+.decoracion-circulo {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.decoracion-1 {
+    /* Circulo grande verde */
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-verde-claro), rgba(56, 142, 60, 0.3));
+    top: -20px;
+    right: -20px;
+    animation: pulsoCirculo 3s ease-in-out infinite;
+}
+
+.decoracion-2 {
+    /* Circulo pequeno dorado */
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-dorado), rgba(255, 193, 7, 0.5));
+    bottom: -15px;
+    left: -15px;
+    animation: pulsoCirculo 3s ease-in-out infinite 1s;
+}
+
+/* Animacion de pulso para circulos */
+@keyframes pulsoCirculo {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Confeti decorativo */
+.decoracion-confeti {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='20' cy='20' r='5' fill='%23ffc107'/%3E%3Ccircle cx='80' cy='30' r='4' fill='%23388e3c'/%3E%3Ccircle cx='50' cy='10' r='3' fill='%23ff6f00'/%3E%3Ccircle cx='30' cy='40' r='4' fill='%232196f3'/%3E%3Ccircle cx='70' cy='50' r='3' fill='%23e91e63'/%3E%3C/svg%3E");
+    background-size: contain;
+    animation: caerConfeti 2s ease-in-out infinite;
+}
+
+@keyframes caerConfeti {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px) rotate(10deg);
+    }
+}
+
+/* ============================================
+   10. MEDIA QUERIES (RESPONSIVE)
+   ============================================
+   BREAKPOINTS:
+   - 1200px: Tablets grandes y laptops pequenas
+   - 992px: Tablets
+   - 768px: Tablets pequenas
+   - 576px: Moviles grandes
+   - 480px: Moviles pequenos
+============================================ */
+
+/* Tablets grandes y laptops pequenas */
+@media (max-width: 1200px) {
+    .ganador-titulo {
+        font-size: 2.2rem;
+    }
+    
+    .ganador-periodo {
+        font-size: 1.6rem;
+    }
+    
+    .ganador-nombre {
+        font-size: 1.9rem;
+    }
+    
+    .ganador-imagen {
+        max-width: 380px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .ganador-container {
+        /* Cambiar a una columna */
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Imagen arriba en tablet/movil */
+    .ganador-imagen-container {
+        order: 1;
+    }
+    
+    /* Contenido abajo en tablet/movil */
+    .ganador-contenido {
+        order: 2;
+        text-align: center;
+    }
+    
+    .ganador-titulo {
+        font-size: 2rem;
+    }
+    
+    .ganador-nombre {
+        font-size: 1.7rem;
+    }
+    
+    .ganador-logos {
+        justify-content: center;
+    }
+    
+    .ganador-imagen {
+        max-width: 350px;
+    }
+}
+
+/* Tablets pequenas */
+@media (max-width: 768px) {
+    .ganador-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .ganador-titulo {
+        font-size: 1.8rem;
+    }
+    
+    .ganador-periodo {
+        font-size: 1.4rem;
+    }
+    
+    .ganador-nombre {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .ganador-agencia {
+        font-size: 1.1rem;
+    }
+    
+    .ganador-mensaje {
+        font-size: 1.2rem;
+    }
+    
+    .ganador-boton {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: 1.1rem;
+    }
+    
+    .ganador-imagen {
+        max-width: 300px;
+    }
+    
+    .decoracion-1 {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .decoracion-2 {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Moviles grandes */
+@media (max-width: 576px) {
+    .ganador-section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+        min-height: auto;
+    }
+    
+    .ganador-contenido {
+        padding: var(--spacing-sm);
+    }
+    
+    .ganador-titulo {
+        font-size: 1.5rem;
+    }
+    
+    .ganador-periodo {
+        font-size: 1.2rem;
+    }
+    
+    .ganador-nombre {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .ganador-agencia {
+        font-size: 1rem;
+    }
+    
+    .ganador-mensaje {
+        font-size: 1.1rem;
+    }
+    
+    .ganador-boton {
+        /* Boton de ancho completo en movil */
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .ganador-imagen {
+        max-width: 260px;
+    }
+    
+    .imagen-marco {
+        border-width: 3px;
+        padding: 5px;
+    }
+    
+    .logo-imagen {
+        max-width: 100px;
+        max-height: 50px;
+    }
+    
+    .ganador-logos {
+        gap: var(--spacing-md);
+    }
+}
+
+/* Moviles pequenos */
+@media (max-width: 480px) {
+    .ganador-titulo {
+        font-size: 1.3rem;
+    }
+    
+    .ganador-periodo {
+        font-size: 1rem;
+    }
+    
+    .ganador-nombre {
+        font-size: 1.1rem;
+    }
+    
+    .ganador-imagen {
+        max-width: 220px;
+    }
+    
+    .decoracion-1,
+    .decoracion-2 {
+        /* Ocultar decoraciones en moviles muy pequenos */
+        display: none;
+    }
+}
+#header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+} 

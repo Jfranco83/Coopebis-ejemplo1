@@ -1,0 +1,166 @@
+<!-- ============================================================
+    COMPONENTE: MENU LATERAL MOVIL
+    ============================================================
+    
+    DESCRIPCION:
+    Menu que se desliza desde la derecha en dispositivos moviles.
+    Solo se muestra en pantallas menores a 768px.
+    
+    COMO USAR:
+    Este componente se carga automaticamente con JavaScript.
+    Se inserta en el elemento con id="menu-lateral-container"
+    
+    IMPORTANTE - MODIFICAR ENLACES:
+    =============================================
+    Si quieres cambiar los enlaces del menu, MODIFICA ESTE ARCHIVO.
+    Los cambios se reflejaran automaticamente en todas las paginas
+    que usen los componentes.
+    =============================================
+    
+    COMO AGREGAR UN ITEM SIN SUBMENU:
+    <li class="nav-lateral-item">
+        <a href="/pagina.html" class="nav-lateral-link">
+            <span>Nombre del Menu</span>
+        </a>
+    </li>
+    
+    COMO AGREGAR UN ITEM CON SUBMENU:
+    <li class="nav-lateral-item tiene-submenu">
+        <a href="#" class="nav-lateral-link" data-submenu="true">
+            <span>Nombre del Menu</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="submenu-lateral">
+            <a href="/sub1.html" class="submenu-lateral-link">Subitem 1</a>
+            <a href="/sub2.html" class="submenu-lateral-link">Subitem 2</a>
+        </div>
+    </li>
+    
+============================================================ -->
+
+<!-- ========== OVERLAY (FONDO OSCURO) ========== -->
+<!-- Se muestra cuando el menu esta abierto -->
+<div class="menu-overlay" id="menu-overlay"></div>
+
+<!-- ========== MENU LATERAL ========== -->
+<nav class="menu-lateral" id="menu-lateral">
+    
+    <!-- ========== HEADER DEL MENU ========== -->
+    <!-- Logo y boton cerrar -->
+    <div class="menu-lateral-header">
+        <!-- MODIFICAR: Cambia el src por la URL de tu logo -->
+        <img src="https://coopebis.coop/wp-content/uploads/2024/06/Logo-actualizado-WEB.png" 
+             alt="Logo coopebis" 
+             class="menu-lateral-logo">
+        <button class="btn-cerrar-menu" id="btn-cerrar-menu" aria-label="Cerrar menu">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- ========== LISTA DE NAVEGACION ========== -->
+    <ul class="nav-lateral-lista">
+        
+        <!-- ==========================================
+             ITEM 1: INICIO (SIN SUBMENU)
+             ========================================== -->
+        <li class="nav-lateral-item">
+            <a href="#" class="nav-lateral-link">
+                <span>Inicio</span>
+            </a>
+        </li>
+        
+        <!-- ==========================================
+             ITEM 2: NOSOTROS (CON SUBMENU)
+             ========================================== -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Nosotros</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <!-- MODIFICAR: Cambia los href de cada enlace -->
+                <a href="#l" class="submenu-lateral-link">Quienes Sos</a>
+                <a href="#" class="submenu-lateral-link">Normatividad</a>
+                <a href="#" class="submenu-lateral-link">Zona Asamblea General de Delegados</a>
+                <a href="#l" class="submenu-lateral-link">Delegados Cooindegabo</a>
+                <a href="#" class="submenu-lateral-link">Organos de Administracion y Control</a>
+                <a href="#" class="submenu-lateral-link">Gestion Anual</a>
+                <a href="#l" class="submenu-lateral-link">Trabaja con Nosotros</a>
+            </div>
+        </li>
+        
+        <!-- ==========================================
+             ITEM 3: BIENESTAR (CON SUBMENU)
+             ========================================== -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Bienestar</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <a href="#" class="submenu-lateral-link">Nuestros Convenios</a>
+                <a href="#" class="submenu-lateral-link">Como Asociarte</a>
+                <a href="#" class="submenu-lateral-link">Ninos Asociados</a>
+                <a href="#" class="submenu-lateral-link">Proximos Eventos</a>
+                <a href="#" class="submenu-lateral-link">Que es Auxilio de Solidaridad?</a>
+                <a href="#" class="submenu-lateral-link">Becas Fundequidad</a>
+            </div>
+        </li>
+        
+        <!-- ==========================================
+             ITEM 4: CREDITO (CON SUBMENU)
+             ========================================== -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Credito</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <a href="#" class="submenu-lateral-link">Portafolio de Credito</a>
+                <a href="#" class="submenu-lateral-link">Tarjeta Cooindegabo</a>
+                <a href="#" class="submenu-lateral-link">Simula tu Credito</a>
+                <a href="#" class="submenu-lateral-link">Universidad Segura</a>
+            </div>
+        </li>
+        
+        <!-- ==========================================
+             ITEM 5: AHORRO (CON SUBMENU)
+             ========================================== -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Ahorro</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <a href="#" class="submenu-lateral-link">Ahorro a la Vista</a>
+                <a href="#" class="submenu-lateral-link">Ahorro Programado</a>
+                <a href="#" class="submenu-lateral-link">CDAT</a>
+                <a href="#" class="submenu-lateral-link">Simulador de Ahorro</a>
+                <a href="#" class="submenu-lateral-link">Ganador Ahorrador Feliz</a>
+                <a href="#" class="submenu-lateral-link">Que es FOGACOOP?</a>
+            </div>
+        </li>
+        
+        <!-- ==========================================
+             ITEM 6: ZONA ASOCIADOS (CON SUBMENU)
+             ========================================== -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Zona Asociados</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <a href="#" class="submenu-lateral-link">Canales de Atencion</a>
+                <a href="#" class="submenu-lateral-link">Canales de Pago</a>
+                <a href="#" class="submenu-lateral-link">Transacciones con Tarjeta</a>
+                <a href="#" class="submenu-lateral-link">Certificado Tributario</a>
+                <a href="#" class="submenu-lateral-link">Tu estado de Cuenta</a>
+                <a href="#" class="submenu-lateral-link">Refiere y Gana</a>
+                <a href="https://forms.office.com/r/7S8rfy8qpn?origin=lprLink" target="_blank" class="submenu-lateral-link">PQRS</a>
+                <a href="#" class="submenu-lateral-link">Pagos sin identificar</a>
+                <a href="#" class="submenu-lateral-link">APP Cooindegabo</a>
+            </div>
+        </li>
+        
+    </ul>
+</nav>

@@ -1,0 +1,540 @@
+/* ============================================================
+    ESTILOS DE COMPONENTES REUTILIZABLES
+    ============================================================
+    
+    DESCRIPCION:
+    Este archivo contiene los estilos para:
+    - Menu lateral movil (slide desde la derecha)
+    - Imagen flotante central
+    - Asistente virtual flotante (mejoras)
+    
+    COMO USAR:
+    Vincula este archivo CSS en tu HTML:
+    <link rel="stylesheet" href="componentes/estilos-componentes.css">
+    
+    IMPORTANTE:
+    Este archivo debe cargarse DESPUES de tu styles.css principal
+    
+============================================================ */
+
+
+/* ============================================================
+    VARIABLES DE COLORES
+    ============================================================
+    
+    COMO CAMBIAR LOS COLORES:
+    Modifica los valores de las variables aqui.
+    Todos los componentes usaran estos colores automaticamente.
+    
+============================================================ */
+:root {
+    /* ========== COLORES DEL MENU LATERAL ========== */
+    --menu-fondo:#04354b;              /* Fondo del menu (azul oscuro) */
+    --menu-texto: #ffffff;               /* Color del texto */
+    --menu-borde: #16213e;               /* Color de los bordes */  
+    --menu-hover: #e8bd44;               /* Color al pasar el cursor */
+    --menu-activo: #e94560;              /* Color de elemento activo */
+    --menu-submenu-fondo:#e8bd44;       /* Fondo de submenus */
+    
+    /* ========== COLORES DE LA IMAGEN FLOTANTE ========== */
+    --flotante-fondo: #ffffff;           /* Fondo del contenedor */
+    --flotante-sombra: rgba(0,0,0,0.3);  /* Sombra */
+    --flotante-cerrar: #e94560;          /* Boton cerrar */
+    
+    /* ========== COLORES DEL ASISTENTE VIRTUAL ========== */
+    --asistente-tooltip-fondo: #25d366;  /* Fondo del tooltip (verde WhatsApp) */
+    --asistente-tooltip-texto: #ffffff;  /* Texto del tooltip */
+    
+    /* ========== OVERLAY ========== */
+    --overlay-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro detras del menu */
+}
+
+
+/* ============================================================
+    MENU LATERAL MOVIL
+    ============================================================
+    
+    DESCRIPCION:
+    Menu que se desliza desde la derecha en dispositivos moviles.
+    Solo se muestra en pantallas menores a 768px.
+    
+    COMO CAMBIAR LA POSICION (izquierda en lugar de derecha):
+    1. Cambia right: -320px; por left: -320px;
+    2. Cambia right: 0; por left: 0; en .menu-lateral.activo
+    
+    COMO CAMBIAR EL ANCHO:
+    Modifica width: 320px; y ajusta el valor negativo de right/left
+    
+============================================================ */
+
+/* ========== OVERLAY (FONDO OSCURO) ========== */
+/* Se muestra cuando el menu esta abierto */
+.menu-overlay {
+    position: fixed;                     /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);    /* Color oscuro semi-transparente */
+    z-index: 1001;                        /* Debajo del menu, encima del contenido */
+    opacity: 0;                          /* Invisible por defecto */
+    visibility: hidden;                  /* No interactuable por defecto */
+    transition: opacity 0.3s ease,       /* Animacion suave */
+                visibility 0.3s ease;
+}
+
+/* Overlay visible cuando el menu esta activo */
+.menu-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========== CONTENEDOR DEL MENU LATERAL ========== */
+.menu-lateral {
+    position: fixed;                     /* Fijo en la pantalla */
+    top: 0;
+    right: -320px;                       /* Oculto a la derecha (fuera de pantalla) */
+    width: 320px;                        /* Ancho del menu */
+    height: 100%;                        /* Altura completa */
+    background: var(--menu-fondo);       /* Color de fondo */
+    z-index: 1002;                        /* Encima de todo */
+    overflow-y: auto;                    /* Scroll si el contenido es muy largo */
+    transition: right 0.3s ease;         /* Animacion de deslizamiento */
+    box-shadow: -5px 0 20px rgba(0,0,0,0.3); /* Sombra a la izquierda */
+}
+
+/* Menu visible cuando esta activo */
+.menu-lateral.activo {
+    right: 0;                            /* Se mueve a la posicion visible */
+}
+
+/* ========== PARA MOVER EL MENU A LA IZQUIERDA: ==========
+.menu-lateral {
+    right: auto;
+    left: -320px;
+    transition: left 0.3s ease;
+    box-shadow: 5px 0 20px rgba(0,0,0,0.3);
+}
+.menu-lateral.activo {
+    left: 0;
+}
+========================================================== */
+
+
+/* ========== HEADER DEL MENU (LOGO Y BOTON CERRAR) ========== */
+.menu-lateral-header {
+    display: flex;
+    justify-content: space-between;      /* Logo a la izquierda, X a la derecha */
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--menu-borde);
+    background: white;
+}
+
+/* Logo dentro del menu */
+.menu-lateral-logo {
+    max-width: 150px;                    /* Ancho maximo del logo */
+    height: auto;
+    background-color: #ffffff;
+}
+
+/* Boton cerrar (X) */
+.btn-cerrar-menu {
+    background: transparent;
+    border: none;
+    color: var(--menu-texto);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.btn-cerrar-menu:hover {
+    color: var(--menu-activo);
+    transform: rotate(90deg);            /* Rotacion al pasar el cursor */
+}
+
+
+/* ========== LISTA DE NAVEGACION ========== */
+.nav-lateral-lista {
+    list-style: none;                    /* Sin viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ========== ITEMS DEL MENU ========== */
+.nav-lateral-item {
+    border-bottom: 1px solid var(--menu-borde);
+}
+
+/* Enlaces del menu */
+.nav-lateral-link {
+    display: flex;
+    justify-content: space-between;      /* Texto a la izquierda, flecha a la derecha */
+    align-items: center;
+    padding: 18px 20px;
+    color: var(--menu-texto);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+.nav-lateral-link:hover {
+    background: var(--menu-hover);
+}
+
+/* Icono de flecha (chevron) */
+.nav-lateral-link i {
+    transition: transform 0.3s ease;
+}
+
+/* Rotar flecha cuando el submenu esta abierto */
+.nav-lateral-item.submenu-activo .nav-lateral-link i {
+    transform: rotate(180deg);
+}
+
+
+/* ========== SUBMENUS ========== */
+.submenu-lateral {
+    max-height: 0;                       /* Oculto por defecto */
+    overflow: hidden;                    /* No mostrar contenido desbordado */
+    background: var(--menu-submenu-fondo);
+    transition: max-height 0.3s ease;    /* Animacion suave */
+}
+
+/* Submenu visible cuando esta activo */
+.nav-lateral-item.submenu-activo .submenu-lateral {
+    max-height: 1000px;                  /* Altura suficiente para mostrar todo */
+}
+
+/* Enlaces dentro del submenu */
+.submenu-lateral-link {
+    display: block;
+    padding: 14px 20px 14px 40px;        /* Sangria a la izquierda */
+    color: var(--menu-texto);
+    text-decoration: none;
+    font-size: 14px;
+    border-top: 1px solid var(--menu-borde);
+    transition: background 0.3s ease,
+                padding-left 0.3s ease;
+}
+
+.submenu-lateral-link:hover {
+    background: var(--menu-hover);
+    padding-left: 30px;                  /* Desplazamiento al hacer hover */
+}
+
+
+/* ============================================================
+    BOTON PAGOS EN LINEA - FLOTANTE IZQUIERDA
+    ============================================================
+    
+    COMO MODIFICAR:
+    - Cambia los colores de fondo y texto segun tu marca
+    - Ajusta las posiciones (left, bottom) para mover el boton
+    - Modifica las animaciones si deseas efecto diferente
+============================================================ */
+
+.boton-pagos-container {
+    position: fixed;
+    bottom: 400px;
+    right: 30px;
+    z-index: 999;
+}
+
+.boton-pagos {
+    position: relative;
+}
+
+.boton-pagos-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+    transition: all 0.3s ease;
+    animation: botonPagosPulse 2s ease-in-out infinite;
+}
+
+.boton-pagos-link:hover {
+    background: linear-gradient(135deg, #45a049 0%, #388E3C 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
+    animation: none;
+}
+
+.boton-pagos-icono {
+    width: 22px;
+    height: 22px;
+}
+
+.boton-pagos-texto {
+    letter-spacing: 0.5px;
+}
+
+/* Tooltip del boton de pagos */
+.boton-pagos-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.boton-pagos-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: #333;
+}
+
+.boton-pagos-tooltip p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.boton-pagos:hover .boton-pagos-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animacion de pulso del boton */
+@keyframes botonPagosPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+    }
+}
+
+
+/* ============================================================
+    RESPONSIVE DESIGN
+    ============================================================ */
+@media (max-width: 768px) {
+    /* Ocultar navegacion principal original en movil */
+    .navegacion-principal {
+        display: none !important;
+    }
+    
+    /* Asegurar que el boton hamburguesa sea visible */
+    .menu-mobile-toggle {
+        display: flex !important;
+    }
+    
+    /* Boton de pagos mas pequeno en movil */
+    .boton-pagos-container {
+        bottom: 300px;
+        right: 20px;
+    }
+    
+    .boton-pagos-link {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    
+    .boton-pagos-icono {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .boton-pagos-tooltip {
+        display: none; /* Ocultar tooltip en movil */
+    }
+}
+
+/* Ocultar menu lateral en escritorio */
+@media (min-width: 769px) {
+    .menu-lateral,
+    .menu-overlay {
+        display: none !important;
+    }
+}
+
+
+/* ============================================================
+    IMAGEN FLOTANTE CENTRAL
+    ============================================================
+    
+    DESCRIPCION:
+    Imagen promocional que aparece centrada en la pantalla.
+    Tiene un boton para cerrarla y un tooltip.
+    
+    COMO CAMBIAR LA POSICION:
+    Modifica top y left para mover la imagen.
+    50% = centro de la pantalla
+    
+    COMO CAMBIAR EL TAMANO:
+    Modifica max-width en .img-flotante-central
+    
+============================================================ */
+.imagen-flotante-central {
+    position: fixed;
+    top: 50%;                            /* Centro vertical */
+    left: 50%;                           /* Centro horizontal */
+    transform: translate(-50%, -50%);    /* Ajuste para centrar exactamente */
+    z-index: 1000;                       /* Encima de todo */
+    background: var(--flotante-fondo);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px var(--flotante-sombra);
+    animation: flotarCentral 3s ease-in-out infinite; /* Animacion de flotacion */
+    max-width: 350px;                    /* Ancho maximo del contenedor */
+}
+
+/* Animacion de flotacion */
+@keyframes flotarCentral {
+    0%, 100% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, calc(-50% - 10px)); }
+}
+
+/* Boton cerrar */
+.btn-cerrar-flotante {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--flotante-cerrar);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+.btn-cerrar-flotante:hover {
+    transform: scale(1.2);
+    background: #c73e54;
+}
+
+/* Imagen dentro del contenedor */
+.img-flotante-central {
+    max-width: 350px;                    /* Ancho maximo */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Tooltip */
+.tooltip-flotante-central {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--menu-activo);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.imagen-flotante-central:hover .tooltip-flotante-central {
+    opacity: 1;
+}
+
+
+/* ============================================================
+    ASISTENTE VIRTUAL FLOTANTE (MEJORAS)
+    ============================================================
+    
+    DESCRIPCION:
+    Mejoras para el asistente virtual flotante.
+    Complementa los estilos del archivo principal.
+    
+    COMO CAMBIAR LA POSICION:
+    Modifica bottom y right para mover el asistente.
+    
+    Para moverlo a la IZQUIERDA:
+    right: auto;
+    left: 20px;
+    
+============================================================ */
+
+/* Ajustes para dispositivos moviles */
+@media (max-width: 768px) {
+    .asistente-virtual-container {
+        bottom: 15px !important;
+        right: 15px !important;
+    }
+    
+    .asistente-imagen {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    /* Imagen flotante central mas pequeña en movil */
+    .img-flotante-central {
+        max-width: 280px;
+    }
+    
+    .imagen-flotante-central {
+        padding: 15px;
+    }
+}
+
+
+/* ============================================================
+    ANIMACIONES ADICIONALES
+    ============================================================ */
+
+/* Animacion de entrada para el menu lateral */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplicar animacion a los items del menu cuando se abre */
+.menu-lateral.activo .nav-lateral-item {
+    animation: slideIn 0.3s ease forwards;
+}
+
+/* Retraso progresivo para cada item */
+.menu-lateral.activo .nav-lateral-item:nth-child(1) { animation-delay: 0.05s; }
+.menu-lateral.activo .nav-lateral-item:nth-child(2) { animation-delay: 0.1s; }
+.menu-lateral.activo .nav-lateral-item:nth-child(3) { animation-delay: 0.15s; }
+.menu-lateral.activo .nav-lateral-item:nth-child(4) { animation-delay: 0.2s; }
+.menu-lateral.activo .nav-lateral-item:nth-child(5) { animation-delay: 0.25s; }
+.menu-lateral.activo .nav-lateral-item:nth-child(6) { animation-delay: 0.3s; }
+

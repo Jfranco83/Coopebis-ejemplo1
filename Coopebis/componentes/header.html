@@ -1,0 +1,418 @@
+<!-- ============================================================
+    COMPONENTE: HEADER COMPLETO
+    ============================================================
+    
+    DESCRIPCION:
+    Este componente contiene el header completo de la pagina:
+    - Seccion 1: Barra de redes sociales y enlaces rapidos
+    - Seccion 2: Barra de navegacion principal con logo y menu
+    
+    COMO USAR:
+    1. Copia todo el contenido de este archivo
+    2. Pegalo al inicio del <body> de tu pagina HTML
+    3. Asegurate de tener los archivos CSS y JS vinculados
+    
+    ARCHIVOS NECESARIOS:
+    - componentes/estilos-componentes.css (estilos del menu lateral movil)
+    - componentes/menu-lateral.js (funcionalidad del menu movil)
+    - Tu archivo styles.css principal
+    - Font Awesome para iconos
+    
+============================================================ -->
+
+<!-- ==========================================
+    SECCION 1: REDES SOCIALES Y ENLACES RAPIDOS
+    ==========================================
+    
+    ESTRUCTURA:
+    - Lado izquierdo: Iconos de redes sociales
+    - Lado derecho: Enlaces de servicios rapidos
+    
+    COMO CAMBIAR EL COLOR DE FONDO:
+    Busca en tu CSS la clase .seccion-redes y modifica:
+    background: linear-gradient(...) o background-color: #tu-color;
+    
+    COMO AGREGAR MAS REDES SOCIALES:
+    Copia un bloque <a class="icono-red..."> y cambia:
+    - El href (enlace)
+    - La clase del icono (fa-instagram, fa-facebook-f, etc.)
+    - El aria-label (para accesibilidad)
+========================================== -->
+<section id="seccion-redes" class="seccion-redes">
+    <div class="redes-container">
+        
+        <!-- ========== LADO IZQUIERDO: REDES SOCIALES ========== -->
+        <div class="redes-sociales">
+            <h3 class="redes-titulo">Siguenos en:</h3>
+            <div class="iconos-redes">
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/cooindegabo_coop/" 
+                   class="icono-red instagram" 
+                   aria-label="Instagram" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/Cooindegabo" 
+                   class="icono-red facebook" 
+                   aria-label="Facebook" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@cooindegabo_coop" 
+                   class="icono-red tiktok" 
+                   aria-label="TikTok" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@cooindegabocooperativadeah7899" 
+                   class="icono-red youtube" 
+                   aria-label="YouTube" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                
+                <!-- ========================================
+                    PARA AGREGAR OTRA RED SOCIAL:
+                    Copia este bloque y modifica los valores:
+                    
+                    <a href="TU-ENLACE" 
+                       class="icono-red NOMBRE-RED" 
+                       aria-label="NOMBRE-RED" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fab fa-ICONO"></i>
+                    </a>
+                    
+                    Iconos disponibles en Font Awesome:
+                    fa-linkedin, fa-twitter, fa-whatsapp, fa-pinterest, etc.
+                ======================================== -->
+            </div>
+        </div>
+
+        <!-- ========== LADO DERECHO: ENLACES DE SERVICIOS ========== -->
+        <div class="enlaces-horizontales">
+            <nav class="nav-enlaces">
+                <ul class="lista-enlaces">
+                    <li><a href="https://danger.coplix.co/app/49_coindegabo/login_005/" target="_blank" rel="noopener noreferrer" class="enlace-servicio">Inicio de Sesion</a></li>
+                    <li><a href="https://servicios3.selsacloud.com/linix/v6/860077746/loginAsociado.php?nit=860077746" target="_blank" rel="noopener noreferrer" class="enlace-servicio">Pagos en Linea</a></li>
+                    <li><a href="/agencias.html" class="enlace-servicio">Red de Agencias</a></li>
+                    <li><a href="https://forms.office.com/r/HYExeuuUaZ?origin=lprLink" target="_blank" rel="noopener noreferrer" class="enlace-servicio">Solicita Productos</a></li>
+                    <li><a href="/asociate.html" class="enlace-servicio">Afiliate</a></li>
+                    
+                    <!-- ========================================
+                        PARA AGREGAR MAS ENLACES:
+                        <li><a href="TU-ENLACE" class="enlace-servicio">Texto del Enlace</a></li>
+                    ======================================== -->
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+    SECCION 2: BARRA DE NAVEGACION PRINCIPAL
+    ==========================================
+    
+    ESTRUCTURA:
+    - Logo de la empresa
+    - Menu de navegacion (escritorio)
+    - Boton hamburguesa (movil)
+    
+    COMO CAMBIAR EL COLOR DE FONDO:
+    Busca en tu CSS la clase .seccion-navegacion y modifica:
+    background: #tu-color;
+    
+    COMO CAMBIAR EL LOGO:
+    Modifica el atributo src de la etiqueta <img class="logo">
+    
+    COMO AGREGAR UN NUEVO MENU SIN SUBMENU:
+    <li class="nav-item">
+        <a href="TU-ENLACE" class="nav-link">Texto del Menu</a>
+    </li>
+    
+    COMO AGREGAR UN NUEVO MENU CON SUBMENU:
+    <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle">
+            Texto del Menu
+            <i class="fas fa-chevron-down"></i>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="ENLACE-1" class="dropdown-link">Opcion 1</a></li>
+            <li><a href="ENLACE-2" class="dropdown-link">Opcion 2</a></li>
+        </ul>
+    </li>
+========================================== -->
+<section id="barra-navegacion" class="seccion-navegacion">
+    <div class="navegacion-container">
+        
+        <!-- ========== LOGO ========== -->
+        <!-- PARA CAMBIAR EL LOGO: modifica el atributo src -->
+        <div class="logo-container">
+            <img src="https://cooindegabo.com.co/wp-content/uploads/2024/01/LOGO-COOINDEGABO.png" 
+                 alt="Logo COOINDEGABO" 
+                 class="logo">
+        </div>
+
+        <!-- ========== NAVEGACION PRINCIPAL (ESCRITORIO) ========== -->
+        <!-- En movil se oculta y se usa el menu lateral -->
+        <nav class="navegacion-principal" id="navegacion-principal">
+            <ul class="nav-lista-principal">
+                
+                <!-- MENU: Inicio (sin submenu) -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                </li>
+
+                <!-- MENU: Nosotros (con submenu) -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Nosotros
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/quienes-somos.html" class="dropdown-link">Quienes Somos</a></li>
+                        <li><a href="/normativa.html" class="dropdown-link">Normatividad</a></li>
+                        <li><a href="/zona-asamblea.html" class="dropdown-link">Zona Asamblea General de Delegados</a></li>
+                        <li><a href="/delegados.html" class="dropdown-link">Delegados Cooindegabo</a></li>
+                        <li><a href="/administracion.html" class="dropdown-link">Organos de Administracion y Control</a></li>
+                        <li><a href="/gestion-anual.html" class="dropdown-link">Gestion Anual</a></li>
+                        <li><a href="/trabajo.html" class="dropdown-link">Trabaja con Nosotros</a></li>
+                    </ul>
+                </li>
+
+                <!-- MENU: Bienestar (con submenu) -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Bienestar
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/convenios.html" class="dropdown-link">Nuestros Convenios</a></li>
+                        <li><a href="/asociate.html" class="dropdown-link">Como Asociarte</a></li>
+                        <li><a href="/ninos-socio.html" class="dropdown-link">Niños Asociados</a></li>
+                        <li><a href="/eventos.html" class="dropdown-link">Proximos Eventos</a></li>
+                        <li><a href="/auxilio-solidaridad.html" class="dropdown-link">Que es Auxilio de Solidaridad?</a></li>
+                        <li><a href="/fundequidad.html" class="dropdown-link">Becas Fundequidad</a></li>
+                    </ul>
+                </li>
+
+                <!-- MENU: Credito (con submenu) -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Credito
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/credito.html" class="dropdown-link">Portafolio de Credito</a></li>
+                        <li><a href="/tarjeta.html" class="dropdown-link">Tarjeta Cooindegabo</a></li>
+                        <li><a href="/simulador-C.html" class="dropdown-link">Simula tu Credito</a></li>
+                        <li><a href="/usegura.html" class="dropdown-link">Universidad Segura</a></li>
+                    </ul>
+                </li>
+
+                <!-- MENU: Ahorro (con submenu) -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Ahorro
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/ahorro-vista.html" class="dropdown-link">Ahorro a la Vista</a></li>
+                        <li><a href="/ahorro-programado.html" class="dropdown-link">Ahorro Programado</a></li>
+                        <li><a href="/cdt.html" class="dropdown-link">CDAT</a></li>
+                        <li><a href="/simulado-A.html" class="dropdown-link">Simulador de Ahorro</a></li>
+                        <li><a href="/ahorrador-feliz.html" class="dropdown-link">Ganador Ahorrador Feliz</a></li>
+                        <li><a href="/fogacoop.html" class="dropdown-link">Que es FOGACOOP?</a></li>
+                    </ul>
+                </li>
+
+                <!-- MENU: Zona Asociados (con submenu) -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Zona Asociados
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/canales-atencion.html" class="dropdown-link">Canales de Atencion</a></li>
+                        <li><a href="/canales-pago.html" class="dropdown-link">Canales de Pago</a></li>
+                        <li><a href="/transaciones-tarjeta.html" class="dropdown-link">Transacciones con Tarjeta</a></li>
+                        <li><a href="/tributario.html" class="dropdown-link">Certificado Tributario</a></li>
+                        <li><a href="/estado-cuenta.html" class="dropdown-link">Tu Estado de Cuenta</a></li>
+                        <li><a href="/refiere.html" class="dropdown-link">Refiere y Gana</a></li>
+                        <li><a href="https://forms.office.com/r/7S8rfy8qpn?origin=lprLink" target="_blank" class="dropdown-link">PQRS</a></li>
+                        <li><a href="/pagos-pendiet.html" class="dropdown-link">Pagos sin Identificar</a></li>
+                        <li><a href="/app-cooin.html" class="dropdown-link">APP Cooindegabo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- ========== BOTON HAMBURGUESA (MOVIL) ========== -->
+        <!-- Este boton abre el menu lateral en dispositivos moviles -->
+        <!-- El ID "menu-mobile-toggle" es necesario para el JavaScript -->
+        <div class="menu-mobile-toggle" id="menu-mobile-toggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+    MENU LATERAL MOVIL (SLIDE)
+    ==========================================
+    
+    DESCRIPCION:
+    Menu que se despliega desde la derecha en dispositivos moviles.
+    Se activa al hacer clic en el boton hamburguesa.
+    
+    COMO FUNCIONA:
+    - El overlay oscurece el fondo
+    - El menu se desliza desde la derecha
+    - Los submenus se despliegan como acordeon
+    
+    COMO CAMBIAR EL COLOR DEL MENU:
+    Busca en estilos-componentes.css la clase .menu-lateral
+    y modifica: background: #tu-color;
+    
+    COMO AGREGAR UN NUEVO ITEM SIN SUBMENU:
+    <li class="nav-lateral-item">
+        <a href="TU-ENLACE" class="nav-lateral-link">
+            <span>Texto</span>
+        </a>
+    </li>
+    
+    COMO AGREGAR UN NUEVO ITEM CON SUBMENU:
+    <li class="nav-lateral-item tiene-submenu">
+        <a href="#" class="nav-lateral-link" data-submenu="true">
+            <span>Texto</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="submenu-lateral">
+            <a href="ENLACE-1" class="submenu-lateral-link">Opcion 1</a>
+            <a href="ENLACE-2" class="submenu-lateral-link">Opcion 2</a>
+        </div>
+    </li>
+========================================== -->
+
+<!-- Overlay oscuro (fondo cuando el menu esta abierto) -->
+<div class="menu-overlay" id="menu-overlay"></div>
+
+<!-- Menu lateral -->
+<nav class="menu-lateral" id="menu-lateral">
+    
+    <!-- Header del menu con logo y boton cerrar -->
+    <div class="menu-lateral-header">
+        <!-- PARA CAMBIAR EL LOGO: modifica el atributo src -->
+        <img src="https://cooindegabo.com.co/wp-content/uploads/2024/01/LOGO-COOINDEGABO.png" 
+             alt="Logo COOINDEGABO" 
+             class="menu-lateral-logo">
+        <button class="btn-cerrar-menu" id="btn-cerrar-menu" aria-label="Cerrar menu">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Lista de navegacion -->
+    <ul class="nav-lateral-lista">
+        
+        <!-- Inicio (sin submenu) -->
+        <li class="nav-lateral-item">
+            <a href="index.html" class="nav-lateral-link">
+                <span>Inicio</span>
+            </a>
+        </li>
+        
+        <!-- Nosotros (con submenu) -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Nosotros</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <a href="/quienes-somos.html" class="submenu-lateral-link">Quienes Somos</a>
+                <a href="/normativa.html" class="submenu-lateral-link">Normatividad</a>
+                <a href="/zona-asamblea.html" class="submenu-lateral-link">Zona Asamblea General de Delegados</a>
+                <a href="/delegados.html" class="submenu-lateral-link">Delegados Cooindegabo</a>
+                <a href="/administracion.html" class="submenu-lateral-link">Organos de Administracion y Control</a>
+                <a href="/gestion-anual.html" class="submenu-lateral-link">Gestion Anual</a>
+                <a href="/trabajo.html" class="submenu-lateral-link">Trabaja con Nosotros</a>
+            </div>
+        </li>
+        
+        <!-- Bienestar (con submenu) -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Bienestar</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <a href="/convenios.html" class="submenu-lateral-link">Nuestros Convenios</a>
+                <a href="/asociate.html" class="submenu-lateral-link">Como Asociarte</a>
+                <a href="/ninos-socio.html" class="submenu-lateral-link">Ninos Asociados</a>
+                <a href="/eventos.html" class="submenu-lateral-link">Proximos Eventos</a>
+                <a href="/auxilio-solidaridad.html" class="submenu-lateral-link">Que es Auxilio de Solidaridad?</a>
+                <a href="/fundequidad.html" class="submenu-lateral-link">Becas Fundequidad</a>
+            </div>
+        </li>
+        
+        <!-- Credito (con submenu) -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Credito</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <a href="/credito.html" class="submenu-lateral-link">Portafolio de Credito</a>
+                <a href="/tarjeta.html" class="submenu-lateral-link">Tarjeta Cooindegabo</a>
+                <a href="/simulador-C.html" class="submenu-lateral-link">Simula tu Credito</a>
+                <a href="/usegura.html" class="submenu-lateral-link">Universidad Segura</a>
+            </div>
+        </li>
+        
+        <!-- Ahorro (con submenu) -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Ahorro</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <a href="/ahorro-vista.html" class="submenu-lateral-link">Ahorro a la Vista</a>
+                <a href="/ahorro-programado.html" class="submenu-lateral-link">Ahorro Programado</a>
+                <a href="/cdt.html" class="submenu-lateral-link">CDAT</a>
+                <a href="/simulado-A.html" class="submenu-lateral-link">Simulador de Ahorro</a>
+                <a href="/ahorrador-feliz.html" class="submenu-lateral-link">Ganador Ahorrador Feliz</a>
+                <a href="/fogacoop.html" class="submenu-lateral-link">Que es FOGACOOP?</a>
+            </div>
+        </li>
+        
+        <!-- Zona Asociados (con submenu) -->
+        <li class="nav-lateral-item tiene-submenu">
+            <a href="#" class="nav-lateral-link" data-submenu="true">
+                <span>Zona Asociados</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="submenu-lateral">
+                <a href="/canales-atencion.html" class="submenu-lateral-link">Canales de Atencion</a>
+                <a href="/canales-pago.html" class="submenu-lateral-link">Canales de Pago</a>
+                <a href="/transaciones-tarjeta.html" class="submenu-lateral-link">Transacciones con Tarjeta</a>
+                <a href="/tributario.html" class="submenu-lateral-link">Certificado Tributario</a>
+                <a href="/estado-cuenta.html" class="submenu-lateral-link">Tu Estado de Cuenta</a>
+                <a href="/refiere.html" class="submenu-lateral-link">Refiere y Gana</a>
+                <a href="https://forms.office.com/r/7S8rfy8qpn?origin=lprLink" target="_blank" class="submenu-lateral-link">PQRS</a>
+                <a href="/pagos-pendiet.html" class="submenu-lateral-link">Pagos sin Identificar</a>
+                <a href="/app-cooin.html" class="submenu-lateral-link">APP Cooindegabo</a>
+            </div>
+        </li>
+    </ul>
+</nav>

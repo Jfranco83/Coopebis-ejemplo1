@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ==========================================
+         CONFIGURACIÓN BÁSICA DEL DOCUMENTO HTML
+         ========================================== -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 para español -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración responsive -->
+    <link rel="icon" href="/imagenes-web/ico-coopebis.jpg" type="image-icon"> 
+    <meta name="Open Graph" content="website">
+    <meta name="author" content="Jhon Franco">
+    <title>Coopebis | Cooperativa para el bienestar social</title> 
+    
+    <!-- Meta tags para SEO y posicionamiento -->
+    <meta name="description" content="Tu mejor aliado en soluciones financieras. Ahorro,
+        crédito y convenios exclusivos para asociados. ¡Únete hoy a nuestra familia cooperativa!">
+    <meta name="keywords" content="cooperativa, ahorro, crédito, CDAT, convenios de salud, Coopebis, bienestar social, Colombia">
+    <meta property="og:type" content="website"> 
+    <meta property="og:url" content="https://www.coopebis.com/"> 
+    <meta property="og:title" content="Coopebis | Tu Bienestar es Nuestro Compromiso">
+    <meta property="og:description" content="Descubre nuestros beneficios en ahorro, crédito y convenios exclusivos para asociados.">
+    <meta property="og:image" content="imagens-web/icono-logo-coopebis.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_CO">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Coopebis | Cooperativa para el bienestar social">
+    <meta name="twitter:description" content="Ahorro, crédito y bienestar para todos nuestros asociados.">
+    <meta name="twitter:image" content="https://www.coopebis.com/images/preview-inicio.jpg">
+    <meta property="og:site_name" content="Coopebis">
+    <!-- ==========================================
+         ENLACES EXTERNOS
+         ========================================== -->
+    <!-- Font Awesome para iconos (redes sociales, menú hamburguesa, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <!-- CSS de componentes (menu lateral movil, imagen flotante, asistente) -->
+    <link rel="stylesheet" href="componentes/estilos-componentes.css">
+</head>
+<body>
+    
+    <!-- ==========================================
+         SECCIÓN 1: REDES SOCIALES Y ENLACES RÁPIDOS
+         Barra superior con redes sociales e info
+         ========================================== -->
+    <section id="seccion-redes" class="seccion-redes">
+        <div class="redes-container">
+            
+            <!-- Lado izquierdo: Redes sociales -->
+            <div class="redes-sociales">
+                <h3 class="redes-titulo">Síguenos en:</h3>
+                <div class="iconos-redes">
+                    <!-- Icono de Instagram -->
+                    <a href="https://www.instagram.com/coopebis/?hl=en" class="icono-red instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- Icono de Facebook -->
+                    <a href="https://www.facebook.com/coopebis" class="icono-red facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Icono de TikTok -->
+                    <a href="https://www.tiktok.com/@coopebis" class="icono-red tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <!-- Icono de YouTube -->
+                    <a href="https://www.youtube.com/@coopebiscooperativa" class="icono-red youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    
+                    <!-- CÓMO AGREGAR MÁS REDES SOCIALES:
+                         1. Copia uno de los bloques <a> anteriores
+                         2. Cambia la clase (por ejemplo: "icono-red linkedin")
+                         3. Cambia el icono de Font Awesome (por ejemplo: fa-linkedin)
+                         4. Actualiza el aria-label para accesibilidad
+                         5. Agrega un color en el CSS si deseas un estilo personalizado
+                    -->
+                </div>
+            </div>
+
+            <!-- Lado derecho: Enlaces de servicios -->
+            <div class="enlaces-horizontales">
+                <nav class="nav-enlaces">
+                    <ul class="lista-enlaces">
+                        <li><a href="https://servicios.coopebis.coop/coopebis/login.php" target="_blank" rel="noopener noreferrer" class="enlace-servicio">Portal de Servicios</a></li>
+                        <li><a href="https://servicios3.selsacloud.com/linix/v6/860514823/loginAsociado.php?nit=860514823" target="_blank" rel="noopener noreferrer" class="enlace-servicio">Pagos en Línea</a></li>
+                        <li><a href="https://coopebis.coop/contacto/" class="enlace-servicio">Contácto</a></li>
+                        <li><a href="https://servicios.coopebis.coop/coopebis/login.php" target="_blank" rel="noopener noreferrer" class="enlace-servicio">Solicitud de Productos</a></li>
+                        <li><a href="https://coopebis.coop/asociate/" class="enlace-servicio">Asociate</a></li>
+                        
+                        <!-- CÓMO AGREGAR MÁS ENLACES:
+                             Copia una línea <li> y cambia el texto y el href:
+                             <li><a href="#nuevo-enlace" class="enlace-servicio">Nuevo Enlace</a></li>
+                        -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 2: BARRA DE NAVEGACIÓN PRINCIPAL
+         Menú con logo y navegación responsiva
+         ========================================== -->
+    <section id="barra-navegacion" class="seccion-navegacion">
+        <div class="navegacion-container">
+            
+            <!-- Logo de Coopebis -->
+            <div class="logo-container">
+                <img src="/imagenes-web/logo-coopebis.png" 
+                     alt="Logo Coopebis" 
+                     class="logo">
+            </div>
+
+            <!-- Navegación principal (se oculta en móvil y se muestra con menú hamburguesa) -->
+            <nav class="navegacion-principal" id="navegacion-principal">
+                <ul class="nav-lista-principal">
+                    
+                    <!-- Item 1: Inicio (sin submenú) -->
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+
+                    <!-- Item 2: Nosotros (con submenú desplegable) -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Nosotros
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://coopebis.coop/nosotros/l" class="dropdown-link">Historia</a></li>
+                            <li><a href="https://coopebis.coop/documentos/l" class="dropdown-link">Normatividad</a></li>
+                            <li><a href="https://coopebis.coop/wp-content/uploads/2024/11/CERTIFICADO-ISO-9001-Y-SUS-BENEFICIOS.pdf" target="_blank" rel="noopener noreferrer" class="dropdown-link">Certificado ISO-9001</a></li>
+                            <li><a href="https://coopebis.coop/documentos/" class="dropdown-link">Asamblea General</a></li>
+                            <li><a href="https://coopebis.coop/documentos/" class="dropdown-link">Órganos de Dirección y Control</a></li>
+                            <li><a href="https://coopebis.coop/beneficios/#comiteeducacion" class="dropdown-link">Nuestros Comités</a></li>
+                            <li><a href="https://coopebis.coop/documentos/" class="dropdown-link">Gestión Anual</a></li>
+                             
+                        </ul>
+                    </li>
+
+                    <!-- Item 3: Bienestar -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Bienestar
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://coopebis.coop/servicios-convenios/l" class="dropdown-link">Nuestros Convenios</a></li>
+                            <li><a href="https://coopebis.coop/servicios-convenios/l" class="dropdown-link">Proximos Eventos</a></li>
+                            <li><a href="https://coopebis.coop/auxilios/" class="dropdown-link">Auxilios</a></li>
+                            <li><a href="https://coopebis.coop/beneficios/incentivos/" class="dropdown-link">Incentivos</a></li>
+                            <li><a href="#" class="dropdown-link">Tutoriales</a></li>
+                            <li><a href="https://coopebis.coop/asociate/" class="dropdown-link">Como ser parte de Coopebis</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Item 4: Crédito -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Crédito
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://coopebis.coop/servicios/creditos/" class="dropdown-link">Portafolio de Crédito</a></li>
+                             <li><a href="https://coopebis.coop/wp-content/uploads/2026/03/FO-CRE-001-SOLICITUD-DE-CREDITO-VS15-EDITABLE.pdf" target="_blank" rel="noopener noreferrer" class="dropdown-link">Formulario Solicitud de Crédito</a></li> 
+                            <li><a href="https://coopebis.coop/Simulador/Index.php" class="dropdown-link">Simula tu Crédito</a></li>
+                           <li><a href="https://coopebis.coop/wp-content/uploads/2025/10/AC-CRE-001-Reglamento-de-Credito-vs-14-web.pdf" target="_blank" rel="noopener noreferrer" class="dropdown-link">Reglamento de Crédito</a></li>
+                        </ul>
+                    </li>
+                    <!-- Item 5: Ahorro -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Ahorro
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://coopebis.coop/servicios-ahorro/" class="dropdown-link">Coopirenta</a></li>
+                            <li><a href="https://coopebis.coop/servicios-ahorro/" class="dropdown-link">CDAT</a></li>
+                            <li><a href="https://coopebis.coop/servicios-ahorro/" class="dropdown-link">Ahorro contractual</a></li>
+                            <li><a href="https://coopebis.coop/servicios-ahorro/" class="dropdown-link">Coopebikids</a></li>
+                            <li><a href="https://coopebis.coop/Simulador/Index.php" class="dropdown-link">Simula tu Ahorro</a></li>
+                            <li><a href="https://coopebis.coop/servicios-ahorro/" class="dropdown-link">¿Que es FOGACOOP?</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Item 6: Zona Asociados -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Zona Asociados
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://coopebis.coop/" class="dropdown-link">Horarios de Atención</a></li>
+                            <li><a href="https://servicios.coopebis.coop/coopebis/login.php" class="dropdown-link">Portal de Servicios</a></li>
+                            <li><a href="https://coopebis.coop/contacto/" class="dropdown-link">Contáctanos</a></li>
+                            <li><a href="https://coopebis.coop/pagos-en-linea/" class="dropdown-link">Zona Transaccional</a></li>
+                            <li><a href="https://coopebis.coop/" class="dropdown-link">Premiaton 2026</a></li>
+                            <li><a href="https://www.whatsapp.com/channel/0029Vb7WlwLKbYMUbqxry805" class="dropdown-link">Nuevo Canal de Whatsapp</a></li>
+                            <li><a href="https://servicios.coopebis.coop/coopebis/login.php" target="_blank" rel="noopener noreferrer" class="dropdown-link">PQRS</a></li>
+                            <!-- <li><a href="pagos-pendiet.html" class="dropdown-link">Pagos sin identificar</a></li> -->
+                            <!--<li><a href="app-cooin.html" class="dropdown-link">APP Cooindegabo</a></li>-->
+                        </ul>
+                    </li>
+                    
+                    <!-- CÓMO AGREGAR UN NUEVO MENÚ:
+                         
+                         SIN SUBMENÚ (como "Inicio"):
+                         <li class="nav-item">
+                             <a href="#" class="nav-link">Nuevo Menú</a>
+                         </li>
+                         
+                         CON SUBMENÚ (como "Nosotros"):
+                         <li class="nav-item dropdown">
+                             <a href="#" class="nav-link dropdown-toggle">
+                                 Nuevo Menú
+                                 <i class="fas fa-chevron-down"></i>
+                             </a>
+                             <ul class="dropdown-menu">
+                                 <li><a href="#" class="dropdown-link">Opción 1</a></li>
+                                 <li><a href="#" class="dropdown-link">Opción 2</a></li>
+                             </ul>
+                         </li>
+                    -->
+                </ul>
+            </nav>
+
+            <!-- Botón de menú hamburguesa para móviles 
+                 NOTA: Este boton activa el menu lateral en dispositivos moviles
+                 La clase .menu-toggle es usada por el JavaScript del menu lateral -->
+            <div class="menu-mobile-toggle menu-toggle" id="menu-mobile-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 3: BANNER PROMOCIONAL / SLIDER
+         Carrusel de imágenes con información
+         ========================================== -->
+    <section id="banner-promocional" class="seccion-banner-promocional">
+        <div class="slider-container">
+            
+            <!-- Contenedor de todos los slides -->
+            <div class="slider-wrapper" id="slider-wrapper"> 
+                 <!-- SLIDE 7: Feria de credito -->
+                   <!-- <div class="slide slide-7">
+                    <div class="slide-content">
+                        <div class="slide-imagen">
+                            <img src="/imagens-web/img-centrales/slide-afliate.png" alt="FERIA DE CRÉDITO COOINDEGABO">
+                        </div>
+                        <div class="slide-text">
+                            <h2 class="slide-titulo">Compra de Cartera</h2>
+                            <h2 class="slide-Subtitulo">¡Unifica tus deudas Recogemos deudas de otras entidades y tarjetas de crédito.! </h2>
+                            <p class="slide-descripcion">
+                                  Simplifica tu vida financiera.
+                            </p>
+                            <a href="credito.html"><button class="slide-boton">Solicitalo Aqui</button></a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- FIN SLIDE Feria de credito -->
+                 
+                <!-- SLIDE 1: Ahorro -->
+                <div class="slide slide-1 active">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h2 class="slide-titulo">Nuevo Canal de Whatsapp</h2>
+                            <p class="slide-descripcion">
+                                Únete a nuestro canal de WhatsApp para recibir las últimas noticias y estar siempre informado.
+                            </p>
+                            <a href="https://www.whatsapp.com/channel/0029Vb7WlwLKbYMUbqxry805"><button class="slide-boton">Seguir Canal Aqui</button></a>
+                        </div>
+                        <div class="slide-imagen">
+                            <img src="/imagenes-web/slide-whatt.png" alt="Ahorro coopebis">
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN SLIDE Ahorro -->
+
+                <!-- SLIDE 2: Créditos -->
+                <div class="slide slide-2">
+                    <div class="slide-content">
+                        <div class="slide-imagen">
+                            <img src="/imagenes-web/slide cdat-cdat.png" alt="Créditos coopebis">
+                        </div>
+                        <div class="slide-text">
+                            <h2 class="slide-titulo">Tasas de Interés CDAT'S</h2>
+                            <p class="slide-descripcion">
+                                No esperes más para dartela oportunidad de hacermás rentable tu dinero.
+                            </p>
+                            <a href="https://coopebis.coop/servicios-ahorro/cdat/"><button class="slide-boton">Conoce Más</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN SLIDE Créditos -->
+
+                <!-- SLIDE 3: Convenios -->
+                <div class="slide slide-3">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h2 class="slide-titulo">TARJETA DÉBITO CUPO ROTATIVO</h2>
+                            <p class="slide-descripcion">
+                                Adquierela Ahora mismo y disfruta de todos los beneficios que tenemos para ti.
+                            </p>
+                            <a href="https://coopebis.coop/servicios/creditos/rotativo/"><button class="slide-boton">Adquierela Ahora</button></a>
+                        </div>
+                        <div class="slide-imagen">
+                            <img src="/imagenes-web/SLIDE-TAR.png" alt="Convenios coopebis">
+                        </div>
+                    </div>
+                </div>
+                 <!-- FIN SLIDE Convenios -->
+
+
+                <!-- SLIDE 4: Afiliación -->
+                <div class="slide slide-5">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h2 class="slide-titulo">Tu Ahorro tiene una Sorpresa</h2>
+                            <p class="slide-descripcion">
+                                Abre tu CDAT  y recibe un incentivo según el monto y el plazo de tu inversión.
+                            </p>
+                            <a href="https://coopebis.coop/servicios-ahorro/cdat/"><button class="slide-boton">Inicia tu Inversión Aqui</button></a>
+                        </div>
+                        <div class="slide-imagen">
+                            <img src="/imagenes-web/SLIDE-AHORRO-SORP.png" alt="Afiliación coopebis">
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN SLIDE Afiliación -->
+
+                <!-- SLIDE 6: Plan Referidos -->
+                <div class="slide slide-6">
+                    <div class="slide-content">
+                        <div class="slide-imagen">
+                            <img src="/imagenes-web/SLIDE-ESTUDIENTE.png" alt="Plan Referidos coopebis">
+                        </div>
+                        <div class="slide-text">
+                            <h2 class="slide-titulo">Estudiantes Estrella 2022 -2</h2>
+                            <p class="slide-descripcion">
+                                Conoce el listado final de adjudicación de los estudiantes que recibieron el incentivo por su desempeño académico.
+                            </p>
+                            <a href="refiere.html"><button class="slide-boton">Conoce  Más</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN SLIDE Educación Financiera -->
+
+                <!-- SLIDE 1: ASAMBLEA GENERAL -->
+                <div class="slide slide-4">
+                    <div class="slide-content">
+                        <div class="slide-imagen">
+                            <img src="/imagenes-web/SLIDE-PREMIATON.png" alt="Asamblea General de Delegados coopebis">
+                        </div>
+                        <div class="slide-text">
+                            <h2 class="slide-titulo">Premiatón 2026</h2>
+                            <p class="slide-descripcion">
+                                Ya puedes participar en el premiovpor el automóvil Suzuki Swit Hibrido modelo 2026.
+                            </p>
+                            <a href="https://servicios.coopebis.coop/coopebis/login.php"><button class="slide-boton">Participa Aqui</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN SLIDE ASAMBLEA GENERAL -->
+
+                    <!-- CÓMO AGREGAR UN NUEVO SLIDE:
+                     
+                     1. Copia todo el bloque de slide (desde <div class="slide..."> hasta </div>)
+                     2. Cambia la clase de "slide-X" (por ejemplo, slide-7)
+                     3. Modifica el contenido: título, descripción, imagen
+                     4. Actualiza los indicadores en la parte inferior (agrega un nuevo <span>)
+                     5. Ajusta el CSS si necesitas un color de fondo diferente
+                     6. El JavaScript automáticamente detectará el nuevo slide
+                -->
+            </div>
+
+            <!-- Flechas de navegación -->
+            <button class="slider-arrow slider-arrow-prev" id="slider-prev" aria-label="Slide anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow slider-arrow-next" id="slider-next" aria-label="Slide siguiente">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores de posición (puntos) -->
+            <div class="slider-indicators" id="slider-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+                <span class="indicator" data-slide="5"></span>
+                <span class="indicator" data-slide="6"></span>
+                
+                <!-- PARA AGREGAR MÁS INDICADORES:
+                     Agrega más líneas como esta (cambiando el data-slide):
+                     <span class="indicator" data-slide="6"></span>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 4: CARDS DE SERVICIOS
+         Grid de servicios con animación
+         ========================================== -->
+    <section class="floating-cards-section">
+        <div class="section-container">
+            
+            <!-- Columna izquierda: Contenido principal -->
+            <div class="left-content">
+                <h2 class="main-title scroll-animate">Descubre Nuestros Portafolio</h2>
+                <p class="main-description scroll-animate">
+                    En <strong>Coopebis</strong> transformamos el modelo de ahorro y crédito en una experiencia 
+                    de bienestar integral.
+                </p>
+                <div class="image-wrapper scroll-animate">
+                    <img src="/imagenes-web/familia-coopebis.png" alt="Equipo trabajando">
+                </div>
+            </div>
+
+            <!-- Columna derecha: Grid de cards -->
+            <div class="right-content">
+                
+                <!-- Card 1 -->
+                <div class="floating-card scroll-animate">
+                    <div class="card-icon">
+                        <img src="/imagenes-web/ICONICS-WEBmar.png" alt="alcancia">
+                    </div>
+                    <h3 class="card-title"><strong>Portafolio de Ahorro</strong></h3>
+                    <p class="card-description">
+                       Encuentra la Línea de Ahorro que mejor se adapte a tus necesidades.
+                    </p>
+                    <a href="https://coopebis.coop/servicios-ahorro/" class="card-link">
+                        <span>Ver más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="floating-card scroll-animate">
+                    <div class="card-icon">
+                        <img src="/imagenes-web/ICONICS-WEB-dinero.png" alt="dinero">
+                    </div>
+                    <h3 class="card-title"><strong>Líneas de crédito</strong></h3>
+                    <p class="card-description">
+                        Haz realidad tus sueños con nuestras lineas de Crédito
+                    </p>
+                    <a href="https://coopebis.coop/servicios/creditos/" class="card-link">
+                        <span>Ver más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="floating-card scroll-animate">
+                    <div class="card-icon">
+                       <img src="/imagenes-web/ICONICS-WEB-bienest.png" alt="">
+                    </div>
+                    <h3 class="card-title"><strong>Conoce nuestros convenios</strong></h3>
+                    <p class="card-description">
+                        Disfruta nuestros convenios y beneficios.
+                    </p>
+                    <a href="https://coopebis.coop/servicios-convenios/" class="card-link">
+                        <span>Ver más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="floating-card scroll-animate">
+                    <div class="card-icon">
+                       <img src="/imagenes-web/ICONICS-WEB.png" alt="">
+                        </svg>
+                    </div>
+                    <h3 class="card-title"><strong>Asociate</strong></h3>
+                    <p class="card-description">
+                        Somos una Cooperativa con más de 47 años de trayectoria.
+                    </p>
+                    <a href="https://coopebis.coop/asociate/" class="card-link">
+                        <span>Ver más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 5: BENEFICIOS SOCIALES
+         Grid de cards con imágenes
+         ========================================== -->
+    <section class="benefits-section">
+        <div class="benefits-container">
+            
+            <!-- Header de la sección -->
+            <div class="benefits-header">
+                <h2 class="benefits-title">Beneficios Sociales</h2>
+                <p>Descubre los beneficios que tenemos para ti</p>
+            </div>
+
+            <!-- Grid de cards -->
+            <div class="benefits-cards-grid">
+                
+                <!-- Card 1 -->
+                <a href="#" class="benefit-card">
+                    <div class="benefit-card-image">
+                        <img src="/imagenes-web/kfc.png" alt="KFC">
+                    </div>
+                    <div class="benefit-card-content">
+                        <h3 class="benefit-card-title">KFC</h3>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="#" class="benefit-card">
+                    <div class="benefit-card-image">
+                        <img src="/imagenes-web/popsy.png" alt="POPSY">
+                    </div>
+                    <div class="benefit-card-content">
+                        <h3 class="benefit-card-title">Popsy</h3>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="#" class="benefit-card">
+                    <div class="benefit-card-image">
+                        <img src="/imagenes-web/play-land.png" alt="PLAYLAND">
+                    </div>
+                    <div class="benefit-card-content">
+                        <h3 class="benefit-card-title">PLEYLAND</h3>
+                    </div>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="#" class="benefit-card">
+                    <div class="benefit-card-image">
+                        <img src="/imagenes-web/viacoop.png" alt="viacoop">
+                    </div>
+                    <div class="benefit-card-content">
+                        <h3 class="benefit-card-title">VIACOOP</h3>
+                    </div>
+                </a>
+
+                <!-- Card 5 -->
+                <a href="#" class="benefit-card">
+                    <div class="benefit-card-image">
+                        <img src="/imagenes-web/cine.png" alt="Cultura y Recreación">
+                    </div>
+                    <div class="benefit-card-content">
+                        <h3 class="benefit-card-title">CINE</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+                <!-- Header -->
+            <div class="notigabo-header">
+                <h2 class="notigabo-title">GALERIA DE NOTICIAS COOPEBIS</h2>
+            </div>
+
+<!--SECCION GANADOR -->
+    <section class="ganador-section">
+        
+        <!-- Contenedor principal con Grid de 2 columnas -->
+        <div class="ganador-container">
+            
+            <!-- ============================================
+                 COLUMNA IZQUIERDA - CONTENIDO
+                 ============================================
+                 PARA MOVER A LA DERECHA:
+                 - Agrega la clase "orden-2" a este div
+                 - Y agrega "orden-1" al div de imagen
+            ============================================ -->
+            <div class="ganador-contenido">
+                
+                <!-- Titulo principal del sorteo -->
+                <!-- PARA CAMBIAR: Modifica el texto directamente -->
+                <h1 class="ganador-titulo">
+                   PREMIATON 2026
+                    <span class="ganador-periodo">Primer Ganador</span>
+                </h1>
+                
+                <!-- Nombre del ganador con animacion -->
+                <!-- PARA CAMBIAR NOMBRE: Modifica el texto dentro del h2 -->
+                <!-- PARA CAMBIAR ANIMACION: Busca @keyframes en el CSS -->
+                <h2 class="ganador-nombre">
+                    JHON EDWIN RÁMIREZ CALDERÓN
+                </h2>
+                
+                <!-- Agencia del ganador -->
+                <!-- PARA CAMBIAR: Modifica el texto directamente -->
+
+                
+                <!-- Mensaje motivacional -->
+                <p class="ganador-mensaje">
+                    Tu tambien puedes ser un feliz ganador
+                </p>
+                
+                <!-- Boton de accion -->
+                <!-- PARA CAMBIAR URL: Modifica el href -->
+                <!-- PARA CAMBIAR TEXTO: Modifica el contenido del boton -->
+                <a href="https://servicios.coopebis.coop/coopebis/login.php" target="_blank" rel="noopener noreferrer" class="ganador-boton">
+                    <span class="boton-texto">Participa aqui</span>
+                    <span class="boton-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                
+                <!-- Texto legal del sorteo -->
+                <p class="ganador-legal">
+                    Este sorteo se realiza en presencia de la Junta de Vigilancia
+                </p>
+                
+                    
+                </div>
+                
+            </div>
+            
+            <!-- ============================================
+                 COLUMNA DERECHA - IMAGEN
+                 ============================================
+                 PARA MOVER A LA IZQUIERDA:
+                 - Agrega la clase "orden-1" a este div
+                 - Y agrega "orden-2" al div de contenido
+            ============================================ -->
+            <div class="ganador-imagen-container">
+                
+                <!-- Marco decorativo de la imagen -->
+                <div class="imagen-marco">
+                    
+                    <!-- Imagen del ganador -->
+                    <!-- CAMBIA src por la foto del ganador -->
+                    <!-- CAMBIA alt por descripcion de la imagen -->
+                    <img src="/imagenes-web/premiaton3-1.png" 
+                         alt="ganador premiaton 2026"
+                         class="ganador-imagen">
+                    
+                    <!-- Elementos decorativos -->
+                    <div class="decoracion-circulo decoracion-1"></div>
+                    <div class="decoracion-circulo decoracion-2"></div>
+                    <div class="decoracion-confeti"></div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+
+
+<!-- FIN SECCION GANADOR-->
+
+
+
+
+
+    <!-- ==========================================
+         SECCIÓN 6: NOTIGABO (REVISTAS)
+         Cards con botón de descarga
+         ========================================== -->
+    <section class="notigabo-section">
+        <div class="notigabo-container">
+            
+            <!-- Header -->
+            <div class="notigabo-header">
+                <h2 class="notigabo-title">Boletín Trimestral</h2>
+                <p class="notigabo-description">
+                    Descubre las últimas noticias de nuestra Cooperativa.
+                </p>
+            </div>
+
+            <!-- Grid de revistas -->
+            <div class="notigabo-grid">
+                
+                <!-- Card 1 -->
+                <article class="notigabo-card">
+                    <div class="card-image-wrapper">
+                        <img src="/imagenes-web/boletin.png" alt="Boletín 1" class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Informe Primer Trimestre</h3>
+                        <p class="card-subtitle">Enero-Febreo-Marzo</p>
+                        <a href="https://coopebis.coop/wp-content/uploads/2026/07/COMUNICADO-ADMINISTRACION-segundo-trimestre-2026.pdf" target="_blank" rel="noopener noreferrer">
+                            <button class="card-button">Descárgalo aquí</button></a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="notigabo-card">
+                    <div class="card-image-wrapper">
+                        <img src="/imagenes-web/boletin.png" alt="Boletín 2" class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                                <h3 class="card-title">Informe Segundo Trimestre</h3>
+                                <p class="card-subtitle">Abril-Mayo-Junio</p>
+                        <a href="https://coopebis.coop/wp-content/uploads/2026/07/COMUNICADO-ADMINISTRACION-segundo-trimestre-2026.pdf" target="_blank" rel="noopener noreferrer">
+                            <button class="card-button">Descárgalo aquí</button></a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="notigabo-card">
+                    <div class="card-image-wrapper">
+                        <img src="/imagenes-web/boletin.png" alt="Boletín 3" class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Informe Tercer Trimestre</h3>
+                        <p class="card-subtitle">Julio-Agosto-Septiembre</p>
+                        <a href="https://coopebis.coop/wp-content/uploads/2026/07/COMUNICADO-ADMINISTRACION-segundo-trimestre-2026.pdf" target="_blank" rel="noopener noreferrer">
+                            <button class="card-button">Descárgalo aquí</button></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 7: CONTACTO (BANNER)
+         Diseño dividido: texto izquierda, imagen derecha
+         ========================================== -->
+    <section class="contacto-banner">
+        <div class="contacto-container">
+            
+            <!-- Contenido de texto -->
+            <div class="contacto-content">
+                <h2 class="contacto-title">¿Tienes alguna pregunta?</h2>
+                <p class="contacto-description">
+                    Estamos aquí para ayudarte, nuestro equipo está listo para resolver 
+                    todas tus dudas y acompañarte en cada paso.
+                </p>
+                <a href="https://coopebis.coop/contacto/" target="_blank" rel="noopener noreferrer" ><button class="contacto-button">Dejanos tu mensaje aquí</button></a>
+            </div>
+
+            <!-- Imagen decorativa -->
+            <div class="contacto-image">
+                <img src="/imagenes-web/Call-center.png" alt="Equipo de soporte">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 8: FOOTER - COLUMNAS INFORMATIVAS
+         4 columnas con fondo oscuro
+         ========================================== -->
+    <section class="footer-columns">
+        <div class="footer-container">
+            <div class="footer-grid">
+                
+                <!-- Columna 1: Sede Principal -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Sede Principal</h3>
+                    <div class="footer-content">
+                        <p class="footer-address">
+                            Carrera 31A # 25A – 17 Barrio Gran América<br> 
+                        </p>
+                        <h3 class="footer-title">Sede Centro</h3>
+                        <p class="footer-address">
+                           Carrera 6 # 14 – 98 Of. 1001 Edif. Condominio Parque Santander<br> 
+                        </p>
+                    </div>
+                </div>
+                
+
+                <!-- Columna 2: Normativa y Legalidad -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Normativa y Legalidad</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" 
+                            target="_blank" rel="noopener noreferrer" class="footer-link">Política de protección de datos personales</a></li>
+                        <li><a href="#" 
+                            target="_blank" rel="noopener noreferrer" class="footer-link">Manual de buen gobierno</a></li>
+                        <li><a href="#" 
+                            target="_blank" rel="noopener noreferrer" class="footer-link">Estatuto</a></li>
+                        <!--<li><a href="/pagos-pendiet.html" class="footer-link">Pagos sin identificar</a></li>
+                        <li><a href="https://cooindegabo-my.sharepoint.com/:b:/g/personal/mercadeo_cooindegabo_com_co/IQCC9bZCrll1QZ7j0XUwixjUAXjDON_LpxRXmEE9J03_0jM" 
+                            target="_blank" rel="noopener noreferrer" class="footer-link">Registro Web</a></li>
+                        <li><a href="https://cooindegabo-my.sharepoint.com/:b:/g/personal/mercadeo_cooindegabo_com_co/IQBzZdd-FcK5RoC3JsYAOzhXAXJg9dapnlZYfFU64bKVn5I?e=AWK27t"
+                            target="_blank" rel="noopener noreferrer" class="footer-link">Pilares de la estrategia</a></li>
+                            <li><a href="/topes-tran.html" class="footer-link">Tarifas Transaccionales</a></li>
+                    </ul> -->
+                </div>
+
+                <!-- Columna 3: Reglamentos -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Reglamentos</h3>
+                    <ul class="footer-list">
+                        <li><a href="#"
+                            target="_blank" rel="noopener noreferrer" class="footer-link">Reglamento de crédito</a></li>
+                        <li><a href="#" 
+                            target="_blank" rel="noopener noreferrer"class="footer-link">Reglamento de ahorro</a></li>
+                        <li><a href="#" 
+                            target="_blank" rel="noopener noreferrer"class="footer-link">Reglamento de convenios</a></li>
+                        <li><a href="#" 
+                            target="_blank" rel="noopener noreferrer" class="footer-link">Reglamento de actualización de datos</a></li>
+                         <li><a href="#" 
+                            target="_blank" rel="noopener noreferrer" class="footer-link">Reglamento de Auxilios</a></li>    
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Canales Oficiales -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Canales Oficiales de Atención</h3>
+                    <ul class="footer-list">
+                        <li><a href="mailto:atencion@cooindegabo.com.co" class="footer-link">atencionalasociado@coopebis.com.coop</a></li>
+                        <li><a href="https://coopebis.coop/contacto/" class="footer-link">Contácto</a></li>
+                        <li><a href="https://servicios.coopebis.coop/coopebis/login.php" target="_blank" rel="noopener noreferrer" class="footer-link">PQRS</a></li>
+                        <li><a href="mailto:notificacionesjudiciales@cooindegabo.com.co" class="footer-link">bienestar@coopebis.com.coop</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 9: LOGOS INSTITUCIONALES
+         5 logos sin animaciones
+         ========================================== -->
+    <section class="footer-logos">
+        <div class="logos-container">
+            <div class="logo-item">
+                <img src="/imagenes-web/logo-supersolidaria-2023.png" alt="Logo 1" class="logo-img">
+            </div>
+            <div class="logo-item">
+                <img src="/imagenes-web/Logos-Fogacoop-vertical.png" alt="Logo 2" class="logo-img">
+            </div>
+            <div class="logo-item">
+                <img src="/imagenes-web/logo-coopebis.png" alt="Logo 3" class="logo-img">
+            </div>
+            <div class="logo-item">
+                <img src="/imagenes-web/logos_icontec.png" alt="Logo 4" class="logo-img">
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 10: COPYRIGHT
+         Pie de página final
+         ========================================== -->
+    <footer class="footer-bottom">
+        <div class="footer-container">
+            <p class="footer-copyright">
+                Todos los derechos reservados - COOPEBIS - Cooperativa para el Bienestar Social
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         ASISTENTE VIRTUAL FLOTANTE
+         Botón flotante en la esquina de la pantalla
+         
+         COMO MODIFICAR:
+         - Cambia href del enlace <a> para el destino de WhatsApp
+         - Cambia src de la imagen para usar otra imagen
+         - Modifica el texto del tooltip dentro de los <p>
+         ========================================== -->
+    <div class="asistente-virtual-container">
+        <div class="asistente-virtual">
+            <a href="https://wa.me/573009122149?text=Hola,%20necesito%20informacion" target="_blank" rel="noopener noreferrer">
+                <img src="/imagenes-web/ESTRELLITA.png" alt="Asistente Virtual" class="asistente-imagen">
+            </a>
+            <div class="asistente-tooltip">
+                <p>¿Tienes dudas?</p>
+                <p>¡Haz clic aquí!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         BOTON FLOTANTE DE PAGOS EN LINEA
+         Esquina inferior izquierda
+         
+         COMO MODIFICAR:
+         - Cambia href para cambiar la pagina de destino
+         - Modifica el texto del tooltip
+         ========================================== -->
+    <div class="boton-pagos-container">
+        <div class="boton-pagos">
+            <a href="https://servicios3.selsacloud.com/linix/v6/860514823/loginAsociado.php?nit=860514823" class="boton-pagos-link" aria-label="Realizar pagos en linea">
+                <svg class="boton-pagos-icono" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M2 10H22" stroke="currentColor" stroke-width="2"/>
+                    <path d="M6 15H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="boton-pagos-texto">Pagos</span>
+            </a>
+            <div class="boton-pagos-tooltip">
+                <p>Paga en linea</p>
+                <p>facil y seguro!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MENU LATERAL MOVIL
+         Se despliega desde la derecha en dispositivos moviles
+         Solo visible en pantallas menores a 768px
+         
+         COMO AGREGAR MAS ITEMS:
+         1. Copia un bloque <li class="nav-lateral-item">
+         2. Para items CON submenu, usa la clase "tiene-submenu"
+         3. Para items SIN submenu, no agregues la clase
+         ========================================== -->
+    
+    <!-- Overlay (fondo oscuro) -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    
+    <!-- Menu lateral -->
+    <nav class="menu-lateral" id="menu-lateral">
+        
+        <!-- Header del menu con logo y boton cerrar -->
+        <div class="menu-lateral-header">
+            <img src="/imagenes-web/logo-coopebis.png" 
+                 alt="Logo coopebis" 
+                 class="menu-lateral-logo">
+            <button class="btn-cerrar-menu" id="btn-cerrar-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- Lista de navegacion -->
+        <ul class="nav-lateral-lista">
+            
+            <!-- Item 1: Inicio (sin submenu) -->
+            <li class="nav-lateral-item">
+                <a href="index.html" class="nav-lateral-link">
+                    <span>Inicio</span>
+                </a>
+            </li>
+            
+            <!-- Item 2: Nosotros (con submenu) -->
+            <li class="nav-lateral-item tiene-submenu">
+                <a href="#" class="nav-lateral-link" data-submenu="true">
+                    <span>Nosotros</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="submenu-lateral">
+                    <a href="#" class="submenu-lateral-link">Historia</a>
+                    <a href="#" class="submenu-lateral-link">Normatividad</a>
+                    <a href="#" class="submenu-lateral-link">Certificado ISO-9001</a>
+                    <a href="#" class="submenu-lateral-link">Asamblea General</a>
+                    <a href="#" class="submenu-lateral-link">Órganos de Dirección y Control</a>
+                    <a href="#" class="submenu-lateral-link">Muestros Comités</a>
+                    <a href="#" class="submenu-lateral-link">Gestión Anual</a>
+                </div>
+            </li>
+            
+            <!-- Item 3: Bienestar (con submenu) -->
+            <li class="nav-lateral-item tiene-submenu">
+                <a href="#" class="nav-lateral-link" data-submenu="true">
+                    <span>Bienestar</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="#">
+                    <a href="#" class="submenu-lateral-link">Nuestros Convenios</a>
+                    <a href="#" class="submenu-lateral-link">Proximos Evento</a>
+                    <a href="#" class="submenu-lateral-link">Auxilios</a>
+                    <a href="#" class="submenu-lateral-link">Incentivos</a>
+                    <a href="#" class="submenu-lateral-link">Tutoriales</a>
+                    <a href="#" class="submenu-lateral-link">Como ser parte de Coopebis</a>
+                </div>
+            </li>
+            
+            <!-- Item 4: Credito (con submenu) -->
+            <li class="nav-lateral-item tiene-submenu">
+                <a href="#" class="nav-lateral-link" data-submenu="true">
+                    <span>Crédito</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="submenu-lateral">
+                    <a href="#" class="submenu-lateral-link">Portafolio de Crédito</a>
+                    <a href="#" class="submenu-lateral-link">Formulario solicitud de crédito</a>
+                    <a href="#" class="submenu-lateral-link">Simula tu Crédito</a>
+                    <a href="#" class="submenu-lateral-link">Reglamento de crédito</a>
+                </div>
+            </li>
+            
+            <!-- Item 5: Ahorro (con submenu) -->
+            <li class="nav-lateral-item tiene-submenu">
+                <a href="#" class="nav-lateral-link" data-submenu="true">
+                    <span>Ahorro</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="submenu-lateral">
+                    <a href="#" class="submenu-lateral-link">Coopirenta</a>
+                    <a href="#" class="submenu-lateral-link">CDAT</a>
+                    <a href="#" class="submenu-lateral-link">Ahorro contractual</a>
+                    <a href="#" class="submenu-lateral-link">Coopebikids</a>
+                    <a href="#" class="submenu-lateral-link">Simula tu ahorro</a>
+                    <a href="#" class="submenu-lateral-link">¿Que es FOGACOOP?</a>
+                </div>
+            </li>
+            
+            <!-- Item 6: Zona Asociados (con submenu) -->
+            <li class="nav-lateral-item tiene-submenu">
+                <a href="#" class="nav-lateral-link" data-submenu="true">
+                    <span>Zona Asociados</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="submenu-lateral">
+                    <a href="#" class="submenu-lateral-link">Horarios de Atención</a>
+                    <a href="#" class="submenu-lateral-link">Portal de servicios</a>
+                    <a href="#" class="submenu-lateral-link">Contáctanos</a>
+                    <a href="#" class="submenu-lateral-link">Zona Transaccional</a>
+                    <a href="#" class="submenu-lateral-link">Premiaton 2026</a>
+                    <a href="#" class="submenu-lateral-link">Muevo Canal de Whatsapp</a>
+                    <a href="https://forms.office.com/r/7S8rfy8qpn?origin=lprLink" target="_blank" rel="noopener noreferrer" class="submenu-lateral-link">PQRS</a>
+                </div>
+            </li>
+            
+        </ul>
+    </nav>
+
+    <!-- ==========================================
+         ARCHIVOS JAVASCRIPT
+         ========================================== -->
+    
+    <!-- JavaScript principal del sitio -->
+    <script src="/js/javascript.js"></script>
+    
+    <!-- JavaScript del menu lateral movil -->
+    <script src="componentes/menu-lateral.js"></script>
+    <!-- IMAGEN FLOTANTE PROMOCIONAL (solo index.html) -->
+<div id="imagen-flotante-central" class="imagen-flotante-central">
+    <button class="btn-cerrar-flotante" id="btn-cerrar-flotante" aria-label="Cerrar">
+        <i class="fas fa-times"></i>
+    </button>
+    <a href="#" target="_blank" rel="noopener noreferrer">
+        <img src="/imagenes-web/pop-up-coopebis.png" alt="Promocion">
+    </a>
+</div>
+
+<script>
+    document.getElementById('btn-cerrar-flotante')?.addEventListener('click', function() {
+        document.getElementById('imagen-flotante-central').style.display = 'none';
+        sessionStorage.setItem('imagenFlotanteCerrada', 'true');
+    });
+    
+    if (sessionStorage.getItem('imagenFlotanteCerrada') === 'true') {
+        document.getElementById('imagen-flotante-central').style.display = 'none';
+    }
+</script>
+</body>
+</html>

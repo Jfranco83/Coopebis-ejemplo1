@@ -1,0 +1,78 @@
+<!-- ============================================================
+    COMPONENTE: ASISTENTE VIRTUAL FLOTANTE
+    ============================================================
+    
+    DESCRIPCION:
+    Boton flotante en la esquina inferior derecha de la pantalla
+    que enlaza a WhatsApp o cualquier otro servicio de atencion.
+    Tiene efecto de flotacion y tooltip al pasar el cursor.-->
+    
+    <!-- COMO USAR:
+    1. Copia todo el contenido de este archivo
+    2. Pegalo antes del cierre de body en tu pagina HTML
+    3. Asegurate de tener los estilos CSS vinculados -->
+    
+    <!--COMO MODIFICAR:
+    - Cambia href para cambiar el enlace de WhatsApp
+    - Cambia src para cambiar la imagen del asistente
+    - Modifica el texto del tooltip en el div .asistente-tooltip -->
+    
+   <!-- POSICION DEL ASISTENTE:
+    Por defecto esta en la esquina inferior derecha.
+    Para cambiar la posicion, modifica en tu CSS:-->
+    
+    <!--.asistente-virtual-container {
+        bottom: 20px;  -> Distancia desde abajo
+        right: 20px;   -> Distancia desde la derecha
+    }-->
+    
+    <!--Para moverlo a la IZQUIERDA:
+    .asistente-virtual-container {
+        right: auto;
+        left: 20px;
+    }
+    
+============================================================ -->
+
+<div class="asistente-virtual-container">
+    <div class="asistente-virtual">
+        
+        <!-- ========== ENLACE DEL ASISTENTE ========== -->
+        <!-- 
+            COMO CAMBIAR EL ENLACE DE WHATSAPP:
+            Modifica el href con tu numero de WhatsApp:
+            href="https://wa.me/TUNUMERO?text=MENSAJE"
+            
+            Ejemplo:
+            href="https://wa.me/573001234567?text=Hola, necesito informacion"
+        -->
+        <a href="https://wa.me/573122679249?text=w45533255" 
+           target="_blank" 
+           rel="noopener noreferrer">
+            
+            <!-- ========== IMAGEN DEL ASISTENTE ========== -->
+            <!-- 
+                COMO CAMBIAR LA IMAGEN:
+                Modifica el atributo src con la ruta de tu imagen
+                
+                TAMANO RECOMENDADO: 80x80 pixeles
+            -->
+            <img src="imagens-web/gabito.png" 
+                 alt="Asistente Virtual" 
+                 class="asistente-imagen">
+        </a>
+        
+        <!-- ========== TOOLTIP (MENSAJE AL PASAR EL CURSOR) ========== -->
+        <!-- 
+            Este mensaje aparece cuando el usuario pasa el cursor
+            sobre el asistente virtual.
+            
+            COMO CAMBIAR EL TEXTO:
+            Modifica el contenido de los <p>
+        -->
+        <div class="asistente-tooltip">
+            <p>Tienes dudas?</p>
+            <p>Haz clic aqui!</p>
+        </div>
+    </div>
+</div>

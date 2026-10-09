@@ -1,0 +1,81 @@
+<!-- ============================================================
+    COMPONENTE: BOTON FLOTANTE DE PAGOS EN LINEA
+    ============================================================ -->
+    
+   <!-- DESCRIPCION:
+    Boton flotante en la esquina inferior izquierda de la pantalla
+    que enlaza a la pagina de pagos en linea.
+    Tiene efecto de rebote y tooltip al pasar el cursor.-->
+   
+    <!-- COMO USAR:
+    1. Copia todo el contenido de este archivo
+    2. Pegalo antes del cierre de body en tu pagina HTML
+    3. Asegurate de tener los estilos CSS vinculados -->
+    
+    <!--COMO MODIFICAR:
+    - Cambia href para cambiar la pagina de destino
+    - Cambia la imagen SVG por otra si deseas
+    - Modifica el texto del tooltip en .boton-pagos-tooltip -->
+    
+    <!--POSICION DEL BOTON:
+    Por defecto esta en la esquina inferior izquierda.
+    Para cambiar la posicion, modifica en tu CSS:-->
+    
+    <!--.boton-pagos-container {
+        bottom: 20px;  -> Distancia desde abajo
+        left: 20px;    -> Distancia desde la izquierda
+    }-->
+    
+    <!--Para moverlo a la DERECHA:
+    .boton-pagos-container {
+        left: auto;
+        right: 20px;
+    }
+    
+============================================================ -->
+
+<div class="boton-pagos-container">
+    <div class="boton-pagos">
+        
+        <!-- ========== ENLACE DEL BOTON ========== -->
+        <!-- 
+            COMO CAMBIAR EL ENLACE:
+            Modifica el href con la pagina de destino
+            
+            Ejemplo:
+            href="/pagos.html"
+            href="https://pagos.tudominio.com"
+        -->
+        <a href="/canales-pago.html" 
+           class="boton-pagos-link"
+           aria-label="Realizar pagos en linea">
+            
+            <!-- ========== ICONO DEL BOTON ========== -->
+            <!-- 
+                Icono de tarjeta de credito/pagos
+                COMO CAMBIAR: Reemplaza este SVG por otro icono
+            -->
+            <svg class="boton-pagos-icono" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M2 10H22" stroke="currentColor" stroke-width="2"/>
+                <path d="M6 15H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            
+            <!-- ========== TEXTO DEL BOTON ========== -->
+            <span class="boton-pagos-texto">Pagos</span>
+        </a>
+        
+        <!-- ========== TOOLTIP (MENSAJE AL PASAR EL CURSOR) ========== -->
+        <!-- 
+            Este mensaje aparece cuando el usuario pasa el cursor
+            sobre el boton de pagos.
+            
+            COMO CAMBIAR EL TEXTO:
+            Modifica el contenido de los <p>
+        -->
+        <div class="boton-pagos-tooltip">
+            <p>Paga en linea</p>
+            <p>facil y seguro!</p>
+        </div>
+    </div>
+</div>

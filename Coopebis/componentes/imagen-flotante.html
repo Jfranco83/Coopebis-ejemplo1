@@ -1,0 +1,127 @@
+<!-- ============================================================
+    COMPONENTE: IMAGEN FLOTANTE CENTRAL
+    ============================================================
+    
+    DESCRIPCION:
+    Imagen promocional que aparece flotando en el centro de la
+    pantalla. Tiene un boton para cerrarla y un tooltip.
+    Se puede cerrar y permanece cerrada durante la sesion.
+    
+    COMO USAR:
+    1. Copia todo el contenido de este archivo
+    2. Pegalo antes del cierre de </body> en tu pagina HTML
+    3. Asegurate de tener los estilos CSS vinculados
+    4. Agrega el JavaScript al final del archivo
+    
+    COMO MODIFICAR:
+    - Cambia href para cambiar el enlace de destino
+    - Cambia src para cambiar la imagen promocional
+    
+    POSICION:
+    Por defecto aparece centrada en la pantalla.
+    Para cambiar la posicion, modifica en tu CSS:
+    
+    .imagen-flotante-central {
+        top: 50%;     -> Posicion vertical (50% = centro)
+        left: 50%;    -> Posicion horizontal (50% = centro)
+    }
+    
+============================================================ -->
+
+<div id="imagen-flotante-central" class="imagen-flotante-central">
+    
+    <!-- ========== BOTON CERRAR ========== -->
+    <!-- Al hacer clic, cierra la imagen flotante -->
+    <button class="btn-cerrar-flotante" 
+            id="btn-cerrar-flotante" 
+            aria-label="Cerrar imagen flotante">
+        <i class="fas fa-times"></i>
+    </button>
+    
+    <!-- ========== ENLACE CON IMAGEN ========== -->
+    <!-- 
+        COMO CAMBIAR EL ENLACE:
+        Modifica el atributo href
+        
+        COMO CAMBIAR LA IMAGEN:
+        Modifica el atributo src
+        
+        TAMANO RECOMENDADO: 400x300 pixeles (o proporcional)
+    -->
+    <a href="https://tu-enlace-destino.com" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="enlace-flotante-central"
+       aria-label="Ver promocion especial">
+        
+        <img src="img/IMAGENES/promocion-especial.png" 
+             alt="Promocion especial COOINDEGABO" 
+             class="img-flotante-central">
+    </a>
+    
+    <!-- ========== TOOLTIP ========== -->
+    <!-- Mensaje que aparece al pasar el cursor -->
+    <div class="tooltip-flotante-central">
+        Click para ver mas!
+    </div>
+</div>
+
+<!-- ==========================================
+    JAVASCRIPT PARA IMAGEN FLOTANTE
+    ==========================================
+    
+    FUNCIONALIDAD:
+    - Cerrar la imagen al hacer clic en el boton X
+    - Guardar en sessionStorage que se cerro
+    - No mostrar si ya se cerro en esta sesion
+    
+    NOTA: Copia este script al final de tu pagina HTML,
+    antes del cierre de </body>
+========================================== -->
+<script>
+// ========================================
+// FUNCIONALIDAD DE IMAGEN FLOTANTE CENTRAL
+// ========================================
+
+// Cerrar imagen flotante al hacer clic en el boton X
+document.getElementById('btn-cerrar-flotante')?.addEventListener('click', function() {
+    const imagenFlotante = document.getElementById('imagen-flotante-central');
+    if (imagenFlotante) {
+        // Ocultar la imagen
+        imagenFlotante.style.display = 'none';
+        
+        // Guardar en sessionStorage que se cerro
+        // La imagen no aparecera de nuevo hasta que se cierre el navegador
+        sessionStorage.setItem('imagenFlotanteCerrada', 'true');
+    }
+});
+
+// Verificar si ya se cerro en esta sesion
+// Si es asi, no mostrar la imagen
+if (sessionStorage.getItem('imagenFlotanteCerrada') === 'true') {
+    const imagenFlotante = document.getElementById('imagen-flotante-central');
+    if (imagenFlotante) {
+        imagenFlotante.style.display = 'none';
+    }
+}
+
+// ========================================
+// PARA MOSTRAR LA IMAGEN SIEMPRE:
+// Comenta o elimina el bloque anterior de verificacion
+// ========================================
+
+// ========================================
+// PARA QUE LA IMAGEN SE MUESTRE DESPUES DE X SEGUNDOS:
+// Descomenta el siguiente codigo:
+// 
+// const imagenFlotante = document.getElementById('imagen-flotante-central');
+// if (imagenFlotante) {
+//     imagenFlotante.style.display = 'none';
+//     setTimeout(function() {
+//         if (sessionStorage.getItem('imagenFlotanteCerrada') !== 'true') {
+//             imagenFlotante.style.display = 'block';
+//         }
+//     }, 3000); // 3000 = 3 segundos
+// }
+// ========================================
+</script>
